@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5be8649667cd7f49a2741d3e31a471e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: {x: 10, y: 10}
+  size: {x: 20, y: 20}
   floorTilePrefab: {fileID: 551373090546437977, guid: 6010a0c525c740c41b63d0e388e3afb9, type: 3}
 --- !u!1 &963194225
 GameObject:
@@ -338,12 +338,17 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 11, z: 0}
+  m_LocalPosition: {x: 0, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!54 &1322882060 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 5290803507670964741, guid: 5392b6213c2524d4e924ec796b161886, type: 3}
+  m_PrefabInstance: {fileID: 7381086419183134643}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1407165129
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,6 +385,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7381086418291334394, guid: 5392b6213c2524d4e924ec796b161886, type: 3}
   m_PrefabInstance: {fileID: 7381086419183134643}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2053313966 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7687516110860768315, guid: 5392b6213c2524d4e924ec796b161886, type: 3}
+  m_PrefabInstance: {fileID: 7381086419183134643}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2053313967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053313966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a769bc860c35c974e802f29be697c732, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1322882060}
 --- !u!1001 &7381086419183134643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -387,6 +410,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1407165130}
     m_Modifications:
+    - target: {fileID: 7381086418291334393, guid: 5392b6213c2524d4e924ec796b161886, type: 3}
+      propertyPath: m_Radius
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7381086418291334394, guid: 5392b6213c2524d4e924ec796b161886, type: 3}
       propertyPath: m_RootOrder
       value: 0

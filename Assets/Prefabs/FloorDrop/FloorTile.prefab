@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 551373090546437988}
   - component: {fileID: 551373090546437979}
   - component: {fileID: 6474845079554997128}
-  - component: {fileID: 1523310144703098638}
   - component: {fileID: 668678798540199087}
+  - component: {fileID: 6725669759883585281}
   m_Layer: 0
   m_Name: FloorTile
   m_TagString: Untagged
@@ -343,7 +343,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &1523310144703098638
+--- !u!114 &668678798540199087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551373090546437977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9c8ff23030346e9878deb7108bd65d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breakColourStart: {r: 1, g: 1, b: 1, a: 1}
+  breakColourEnd: {r: 0, g: 0, b: 0, a: 1}
+  timer: 1.5
+--- !u!54 &6725669759883585281
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -359,18 +374,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &668678798540199087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551373090546437977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9c8ff23030346e9878deb7108bd65d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  breakColourStart: {r: 0, g: 1, b: 0, a: 1}
-  breakColourEnd: {r: 1, g: 0, b: 0, a: 1}
-  timer: 3

@@ -48,6 +48,7 @@ namespace FloorDrop
         {
             _rb.isKinematic = false;
             _collider.enabled = false;
+            _renderer.material.color = breakColourEnd;
         }
     }
 }
