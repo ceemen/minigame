@@ -216,13 +216,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &478782745 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6537024626286632803, guid: b72ccad5ccc9f0c419511994776d289b, type: 3}
+  m_PrefabInstance: {fileID: 4383919704905770374}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &478782746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478782745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8af824695b4ed69466a07e5e65f25f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpHeight: 12
 --- !u!43 &923446649
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-7900
+  m_Name: pb_Mesh-17046
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -391,6 +409,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2070845066}
+    - target: {fileID: 7431116493056260333, guid: 01bf5df38c1019f438e3f35a6a009e98, type: 3}
+      propertyPath: m_VersionIndex
+      value: 23
+      objectReference: {fileID: 0}
     - target: {fileID: 7431116493056260334, guid: 01bf5df38c1019f438e3f35a6a009e98, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -451,7 +473,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-25698
+  m_Name: pb_Mesh-16994
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -630,7 +652,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6537024626286632802, guid: b72ccad5ccc9f0c419511994776d289b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6537024626286632802, guid: b72ccad5ccc9f0c419511994776d289b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -683,7 +705,7 @@ PrefabInstance:
       objectReference: {fileID: 923446649}
     - target: {fileID: 7431116493056260333, guid: 01bf5df38c1019f438e3f35a6a009e98, type: 3}
       propertyPath: m_VersionIndex
-      value: 17
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 7431116493056260334, guid: 01bf5df38c1019f438e3f35a6a009e98, type: 3}
       propertyPath: m_RootOrder
