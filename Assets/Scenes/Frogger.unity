@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.42344344, g: 0.47082365, b: 0.5131186, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -310,6 +310,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1165866555 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2374213697807734699, guid: 51673ac388452ec40a931b7581199768, type: 3}
+  m_PrefabInstance: {fileID: 1811310137}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1623617405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -466,6 +471,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Road
       objectReference: {fileID: 0}
+    - target: {fileID: 5034015296632205343, guid: 51673ac388452ec40a931b7581199768, type: 3}
+      propertyPath: spawner
+      value: 
+      objectReference: {fileID: 1165866555}
     - target: {fileID: 7179990049985238066, guid: 51673ac388452ec40a931b7581199768, type: 3}
       propertyPath: m_RootOrder
       value: 0

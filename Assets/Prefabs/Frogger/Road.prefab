@@ -140,7 +140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea42cc19cc732d94c87eb25f63f75234, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Boulder: {fileID: 5313241433293403616, guid: 025f6bbfdc35d0545b2a85b16bc0a6a6, type: 3}
-  LargeBoulder: {fileID: 8172961412507389834, guid: 89411746d68210c4a86931b8c152b008, type: 3}
-  Spawner: {fileID: 4217378901561071035}
-  whatSpawns: 0
+  prefabList:
+  - {fileID: 5313241433293403616, guid: 025f6bbfdc35d0545b2a85b16bc0a6a6, type: 3}
+  - {fileID: 8172961412507389834, guid: 89411746d68210c4a86931b8c152b008, type: 3}
