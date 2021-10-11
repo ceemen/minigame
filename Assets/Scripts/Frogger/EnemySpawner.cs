@@ -7,7 +7,7 @@ namespace Frogger
     {
         [SerializeField] private List<GameObject> prefabList;
 
-        private const float SpawnRate = 5f;
+        private const float SpawnRate = 2.5f;
         private float _nextSpawn;
 
         // Update is called once per frame
@@ -15,8 +15,8 @@ namespace Frogger
         {
             if (Time.time < _nextSpawn)
                 return;
-            var whatSpawns = Random.Range(0, prefabList.Count - 1);
-            Instantiate(prefabList[whatSpawns], transform.position, Quaternion.Euler(0, 90, 0));
+            var whatSpawns = Random.Range(0, prefabList.Count);
+            Instantiate(prefabList[whatSpawns], transform.position, transform.rotation);
             _nextSpawn = Time.time + SpawnRate;
         }
     }
