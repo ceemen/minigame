@@ -7,6 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8045216043968501951, guid: 651b1a87ddbfef241b650cfe83de3771, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].time
+      value: 0.5108223
+      objectReference: {fileID: 0}
+    - target: {fileID: -8045216043968501951, guid: 651b1a87ddbfef241b650cfe83de3771, type: 3}
+      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].value
+      value: 0.99360657
+      objectReference: {fileID: 0}
+    - target: {fileID: -8045216043968501951, guid: 651b1a87ddbfef241b650cfe83de3771, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1052142322029105766, guid: 651b1a87ddbfef241b650cfe83de3771, type: 3}
       propertyPath: m_Name
       value: LargeEnemy
@@ -23,21 +35,25 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2892607040478717666, guid: 651b1a87ddbfef241b650cfe83de3771, type: 3}
+      propertyPath: MaxDistance
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 7437228586623893666, guid: 651b1a87ddbfef241b650cfe83de3771, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7437228586623893666, guid: 651b1a87ddbfef241b650cfe83de3771, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.856657
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7437228586623893666, guid: 651b1a87ddbfef241b650cfe83de3771, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.1807556
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7437228586623893666, guid: 651b1a87ddbfef241b650cfe83de3771, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.801014
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7437228586623893666, guid: 651b1a87ddbfef241b650cfe83de3771, type: 3}
       propertyPath: m_LocalRotation.w
@@ -67,5 +83,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -8045216043968501951, guid: 651b1a87ddbfef241b650cfe83de3771, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 651b1a87ddbfef241b650cfe83de3771, type: 3}
