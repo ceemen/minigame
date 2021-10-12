@@ -9,7 +9,7 @@ public class CameraPan : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.z <= 70)
+        if (transform.position.z <= 70)
         {
             transform.position += Vector3.forward * Time.deltaTime * speed;
         }
