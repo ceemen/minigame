@@ -155,3 +155,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  minSpeed: 20
+  maxSpeed: 30
+  deleteTime: 2

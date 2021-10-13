@@ -8,7 +8,7 @@ public class EnemyScript : MonoBehaviour
 
     public float minSpeed = 30;
     public float maxSpeed = 50;
-
+    public float deleteTime = 2f;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class EnemyScript : MonoBehaviour
     void Update()
     {
         Move();
-        Destroy(gameObject, 2);
+        Destroy(gameObject, deleteTime);
     }
 
     void Move()

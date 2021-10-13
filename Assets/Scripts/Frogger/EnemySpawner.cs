@@ -7,7 +7,7 @@ namespace Frogger
     {
         [SerializeField] private List<GameObject> prefabList;
 
-        private const float SpawnRate = 2.5f;
+        public float SpawnRate = 2.5f;
         private float _nextSpawn;
 
         // Update is called once per frame
