@@ -13,6 +13,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpHeight: 12
+--- !u!114 &478782750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6537024626286632803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 707f4d777a6392d4db477604a89e416e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  jumpHeight: 0
+  moveAction: {fileID: -3715595684411095647, guid: 64c7ddead52e02248b0e485b4993ec02, type: 3}
+  actionAction: {fileID: -3706880691850819765, guid: 64c7ddead52e02248b0e485b4993ec02, type: 3}
 --- !u!1001 &4383919706327516056
 PrefabInstance:
   m_ObjectHideFlags: 0
