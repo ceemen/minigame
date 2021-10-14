@@ -1,8 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-public class PlayerDeath : MonoBehaviour
+namespace LavaTower
 {
-    
+    public class PlayerDeath : MonoBehaviour
+    {
+        public GameObject player;
+        private void OnTriggerEnter(Collider other)
+        {
+            Destroy(player);
+        }
+    }
 }

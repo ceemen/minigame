@@ -15,6 +15,11 @@ namespace LavaTower
 
         private void LateUpdate()
         {
+            if (!player)
+            {
+                enabled = false;
+                return;
+            }
             transform.position = player.transform.position + offset;
         }
     }
