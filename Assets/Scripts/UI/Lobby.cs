@@ -2,6 +2,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace UI
@@ -16,7 +17,8 @@ namespace UI
 
         public void StartGame()
         {
-            print("Starting game");
+            inputManager.enabled = false;
+            SceneManager.LoadScene("Scenes/CoOpTest");
         }
 
         public void Back()

@@ -26,6 +26,11 @@ namespace CoOp
             return PlayerColours[playerIndex % PlayerColours.Length];
         }
 
+        public List<PlayerData> GetPlayers()
+        {
+            return _players;
+        }
+
         private void Awake()
         {
             // If player manager doesn't already exist, make this the singleton.

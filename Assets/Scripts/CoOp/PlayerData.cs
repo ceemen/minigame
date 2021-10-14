@@ -15,6 +15,16 @@ namespace CoOp
             _score = 0;
         }
 
+        public string GetControlScheme()
+        {
+            return _controlScheme;
+        }
+
+        public InputDevice GetDevice()
+        {
+            return _device;
+        }
+
         public int GetScore()
         {
             return _score;
