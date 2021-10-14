@@ -355,8 +355,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9c8ff23030346e9878deb7108bd65d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakColourStart: {r: 1, g: 1, b: 1, a: 1}
-  breakColourEnd: {r: 0, g: 0, b: 0, a: 1}
+  startColour: {r: 1, g: 1, b: 1, a: 1}
+  endColour: {r: 4.237095, g: 0.22183743, b: 0, a: 1}
   timer: 1.5
 --- !u!54 &6725669759883585281
 Rigidbody:

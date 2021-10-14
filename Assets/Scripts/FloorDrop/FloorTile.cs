@@ -4,14 +4,15 @@ namespace FloorDrop
 {
     public class FloorTile : MonoBehaviour
     {
-        [SerializeField] private Color breakColourStart;
-        [SerializeField] private Color breakColourEnd;
+        [SerializeField, ColorUsage(true, true)] private Color startColour, endColour;
         [SerializeField] private float timer;
-        private float _timeLeft;
-        private bool _collided;
+
         private Rigidbody _rb;
         private BoxCollider _collider;
         private MeshRenderer _renderer;
+
+        private float _timeLeft;
+        private bool _collided;
 
         private void Awake()
         {
@@ -35,7 +36,8 @@ namespace FloorDrop
                 return;
             if (_timeLeft > 0)
             {
-                _renderer.material.color = Color.Lerp(breakColourEnd, breakColourStart, _timeLeft / timer);
+                var emissionColour = Color.Lerp(endColour, startColour, _timeLeft / timer);
+                _renderer.material.color = emissionColour;
                 _timeLeft -= Time.deltaTime;
             }
             else
@@ -48,7 +50,7 @@ namespace FloorDrop
         {
             _rb.isKinematic = false;
             _collider.enabled = false;
-            _renderer.material.color = breakColourEnd;
+            _renderer.material.color = endColour;
         }
     }
 }
