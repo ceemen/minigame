@@ -14,7 +14,7 @@ namespace CoOp
             Color.yellow,
         };
 
-        private List<PlayerData> _players = new List<PlayerData>();
+        private readonly List<PlayerData> _players = new List<PlayerData>();
 
         public static PlayerManager GetInstance()
         {
@@ -40,15 +40,17 @@ namespace CoOp
         }
 
         // Returns true if player has been added, false if player was already added.
-        public bool AddPlayer(PlayerInput player)
+        public bool AddPlayer(PlayerInput newPlayer)
         {
+            print($"Player joined: {newPlayer.devices.ToArray()[0]} {newPlayer.devices.Count}");
+            var newPlayerData = new PlayerData(newPlayer.currentControlScheme, newPlayer.devices[0]);
             // Ignore players that have already been added.
             foreach (var playerData in _players)
             {
-                if (playerData.GetInput() == player)
+                if (playerData == newPlayerData)
                     return false;
             }
-            _players.Add(new PlayerData(player));
+            _players.Add(newPlayerData);
             return true;
         }
     }

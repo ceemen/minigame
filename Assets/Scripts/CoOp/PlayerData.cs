@@ -4,18 +4,15 @@ namespace CoOp
 {
     public struct PlayerData
     {
-        private readonly PlayerInput _input;
+        private readonly string _controlScheme;
+        private readonly InputDevice _device;
         private int _score;
 
-        public PlayerData(PlayerInput player)
+        public PlayerData(string controlScheme, InputDevice device)
         {
-            _input = player;
+            _controlScheme = controlScheme;
+            _device = device;
             _score = 0;
-        }
-
-        public PlayerInput GetInput()
-        {
-            return _input;
         }
 
         public int GetScore()
@@ -26,6 +23,16 @@ namespace CoOp
         public void AddScore(int amount)
         {
             _score += amount;
+        }
+
+        public static bool operator ==(PlayerData x, PlayerData y)
+        {
+            return x._controlScheme == y._controlScheme && x._device == y._device;
+        }
+
+        public static bool operator !=(PlayerData x, PlayerData y)
+        {
+            return !(x == y);
         }
     }
 }
