@@ -24,8 +24,8 @@ namespace FloorDrop
 
         private void OnCollisionEnter(Collision other)
         {
-            // Only collide with players.
-            if (!other.gameObject.CompareTag("Player"))
+            // Only collide with players, and when enabled..
+            if (!other.gameObject.CompareTag("Player") || !enabled)
                 return;
             _collided = true;
         }

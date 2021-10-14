@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace FloorDrop
@@ -6,6 +7,12 @@ namespace FloorDrop
     {
         [SerializeField] private Vector2Int size;
         [SerializeField] private GameObject floorTilePrefab;
+        private readonly List<FloorTile> _tiles = new List<FloorTile>();
+
+        public List<FloorTile> GetTiles()
+        {
+            return _tiles;
+        }
 
         private void Start()
         {
@@ -23,6 +30,7 @@ namespace FloorDrop
                         0, 
                         0.5f + y - size.y / 2.0f);
                     var newTile = Instantiate(floorTilePrefab, tilePosition, Quaternion.identity, transform);
+                    _tiles.Add(newTile.GetComponent<FloorTile>());
                 }
             }
         }
