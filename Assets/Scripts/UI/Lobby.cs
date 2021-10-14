@@ -18,7 +18,7 @@ namespace UI
         public void StartGame()
         {
             inputManager.enabled = false;
-            SceneManager.LoadScene("Scenes/CoOpTest");
+            SceneManager.LoadScene("Scenes/FloorDrop");
         }
 
         public void Back()
