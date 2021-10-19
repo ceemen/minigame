@@ -72,6 +72,7 @@ GameObject:
   - component: {fileID: 5393954130756927599}
   - component: {fileID: 1633979748740511450}
   - component: {fileID: 1040638662884751616}
+  - component: {fileID: 4666772361814309490}
   m_Layer: 0
   m_Name: LavaFloor (1)
   m_TagString: Untagged
@@ -156,6 +157,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4666772361814309490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5706633229970893498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f5cb659b9f049468dae91a8a2b0e84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6664030596201658034
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,6 +181,7 @@ GameObject:
   - component: {fileID: 4339850957552866528}
   - component: {fileID: 4584929551506129291}
   - component: {fileID: 8654429649129949918}
+  - component: {fileID: 6853803372828800515}
   m_Layer: 0
   m_Name: LavaFloor
   m_TagString: Untagged
@@ -252,6 +266,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6853803372828800515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6664030596201658034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f5cb659b9f049468dae91a8a2b0e84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7225942310210919828
 GameObject:
   m_ObjectHideFlags: 0
