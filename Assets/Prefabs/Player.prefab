@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7381086418291334393}
   - component: {fileID: 5290803507670964741}
   - component: {fileID: 6043361694742427929}
+  - component: {fileID: 3816192344632177691}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -88,12 +89,36 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f18ba0cc-34ff-4ad3-b817-949cbc25ee36
+    m_ActionName: Player/Walk[/XInputControllerWindows/leftStick,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/XInputControllerWindows/dpad/up,/XInputControllerWindows/dpad/down,/XInputControllerWindows/dpad/left,/XInputControllerWindows/dpad/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5be7a901-b875-4cd2-86a7-3d22b2e2bf6f
+    m_ActionName: Player/Action[/Keyboard/space,/XInputControllerWindows/buttonSouth]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &3816192344632177691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7381086418291334395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 707f4d777a6392d4db477604a89e416e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 13
+  jumpHeight: 0
+  moveAction: {fileID: 0}
+  actionAction: {fileID: 0}
 --- !u!1001 &7381086419134966122
 PrefabInstance:
   m_ObjectHideFlags: 0
