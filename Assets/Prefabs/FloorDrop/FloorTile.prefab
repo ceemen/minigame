@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6474845079554997128}
   - component: {fileID: 668678798540199087}
   - component: {fileID: 6725669759883585281}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: FloorTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +300,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: aecadc5e3d1b0c94f926a39f36c08e99, type: 2}
+  - {fileID: 2100000, guid: 27f44a0fa1436a043b0e51f1cce03566, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -350,13 +350,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551373090546437977}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9c8ff23030346e9878deb7108bd65d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  breakColourStart: {r: 1, g: 1, b: 1, a: 1}
-  breakColourEnd: {r: 0, g: 0, b: 0, a: 1}
+  startColour: {r: 1, g: 1, b: 1, a: 1}
+  endColour: {r: 4.237095, g: 0.22183743, b: 0, a: 1}
   timer: 1.5
 --- !u!54 &6725669759883585281
 Rigidbody:
