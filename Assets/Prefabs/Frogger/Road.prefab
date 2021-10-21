@@ -241,7 +241,7 @@ MonoBehaviour:
   prefabList:
   - {fileID: 1052142322029105766, guid: 651b1a87ddbfef241b650cfe83de3771, type: 3}
   - {fileID: 4593725935251107009, guid: 3a201d55311d8574887ad19207e08b9c, type: 3}
-  SpawnRate: 500
+  SpawnRate: 2
 --- !u!1 &5227663238111967297
 GameObject:
   m_ObjectHideFlags: 0
