@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class RandomMapGenerator : MonoBehaviour
 {
-    // [SerializeField] private List<GameObject> prefabList;
-
     public List<GameObject> spawn = new List<GameObject>();
+	public GameObject Flooring;
 
     // Start is called before the first frame update
     void Start()

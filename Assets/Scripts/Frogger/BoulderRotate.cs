@@ -6,10 +6,12 @@ public class BoulderRotate : MonoBehaviour
 {
     public GameObject playerDecal;
 
+	public int spinSpeed = 100;
+
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(50 * Time.deltaTime, 0, 0, Space.Self);
+        transform.Rotate(spinSpeed * Time.deltaTime, 0, 0, Space.Self);
     }
 
     void OnCollisionEnter(Collision col)

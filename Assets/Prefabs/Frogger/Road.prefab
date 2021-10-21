@@ -239,8 +239,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabList:
-  - {fileID: 1052142322029105766, guid: 651b1a87ddbfef241b650cfe83de3771, type: 3}
-  - {fileID: 4593725935251107009, guid: 3a201d55311d8574887ad19207e08b9c, type: 3}
+  - {fileID: 4119492474586202392, guid: 54bab4b915906db42b51414c6e64ff37, type: 3}
+  - {fileID: 4427625928517086707, guid: b5d79cc057e8e5a458d690d8756223cc, type: 3}
   SpawnRate: 2
 --- !u!1 &5227663238111967297
 GameObject:
