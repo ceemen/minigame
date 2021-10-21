@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!135 &6483339643700432605
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994437151525631882}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.0107421
+  m_Center: {x: -0.0010326208, y: 0, z: 0.010741533}
 --- !u!114 &8151979254417480983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14,19 +27,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerDecal: {fileID: 2114941744819952181, guid: 71106c953757bbc479afb8dd5a5ed477, type: 3}
   spinSpeed: 100
---- !u!135 &6483339643700432605
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 994437151525631882}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.0107421
-  m_Center: {x: -0.0010326208, y: 0, z: 0.010741533}
 --- !u!1 &4119492474586202392
 GameObject:
   m_ObjectHideFlags: 0
@@ -74,7 +74,7 @@ MonoBehaviour:
   speed: 0
   minSpeed: 10
   maxSpeed: 20
-  deleteTime: 2
+  deleteTime: 5
 --- !u!1001 &75886660263332571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85,6 +85,18 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1ac62b1f957c21e4093f034237f0c4dd, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ac62b1f957c21e4093f034237f0c4dd, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ac62b1f957c21e4093f034237f0c4dd, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1ac62b1f957c21e4093f034237f0c4dd, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1ac62b1f957c21e4093f034237f0c4dd, type: 3}
       propertyPath: m_LocalPosition.x
