@@ -18,7 +18,7 @@ namespace UI
         public void StartGame()
         {
             inputManager.enabled = false;
-            SceneManager.LoadScene("Scenes/FloorDrop");
+            SceneManager.LoadScene("Scenes/Wallpush");
         }
 
         public void Back()
