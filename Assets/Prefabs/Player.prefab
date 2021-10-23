@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7381086418291334394}
   - component: {fileID: 7381086418291334393}
   - component: {fileID: 5290803507670964741}
-  - component: {fileID: 3372874521273560993}
+  - component: {fileID: 6043361694742427929}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -64,7 +64,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &3372874521273560993
+--- !u!114 &6043361694742427929
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -73,13 +73,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 7381086418291334395}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 707f4d777a6392d4db477604a89e416e, type: 3}
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  jumpHeight: 5
-  moveAction: {fileID: -3715595684411095647, guid: 64c7ddead52e02248b0e485b4993ec02, type: 3}
-  actionAction: {fileID: -3706880691850819765, guid: 64c7ddead52e02248b0e485b4993ec02, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 64c7ddead52e02248b0e485b4993ec02, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: 
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1001 &7381086419134966122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -142,7 +156,11 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: 15ab830c9ccc2fc468252f9d87cfdba3, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 616187ff436fa1a4398476fd693a7db9, type: 2}
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 15ab830c9ccc2fc468252f9d87cfdba3, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15ab830c9ccc2fc468252f9d87cfdba3, type: 3}
 --- !u!4 &7053863524539469441 stripped
