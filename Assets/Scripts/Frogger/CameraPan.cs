@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class CameraPan : MonoBehaviour
 {
-    public float speed = 1.5f;
+    public float speed = 2f;
+    private float delayCamera = 2f;
+
+    private float timeElapsed;
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.z <= 70)
+        timeElapsed += Time.deltaTime;
+
+        if(timeElapsed > delayCamera)
         {
-            transform.position += Vector3.forward * Time.deltaTime * speed;
+            if (transform.position.z <= 70)
+            {
+                transform.position += Vector3.forward * Time.deltaTime * speed;
+            }
         }
     }
 }
