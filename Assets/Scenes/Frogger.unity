@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3747593, g: 0.38303176, b: 0.3620906, a: 1}
+  m_IndirectSpecularColor: {r: 0.15759987, g: 0.18113376, b: 0.19675079, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1570,13 +1570,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 819953263}
-  m_LocalRotation: {x: 0.99999964, y: 0, z: 0, w: 0.0008727885}
+  m_LocalRotation: {x: 0.99904823, y: 0, z: 0, w: 0.0436195}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 179.9, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 175, y: 0, z: 0}
 --- !u!1001 &836328303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2954,6 +2954,7 @@ GameObject:
   - component: {fileID: 1671630633}
   - component: {fileID: 1671630632}
   - component: {fileID: 1671630635}
+  - component: {fileID: 1671630636}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3040,6 +3041,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+--- !u!114 &1671630636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671630631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1001 &1691819448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3832,6 +3865,50 @@ PrefabInstance:
     - target: {fileID: 3372874521273560993, guid: 5392b6213c2524d4e924ec796b161886, type: 3}
       propertyPath: jumpHeight
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964424775446516987, guid: 5392b6213c2524d4e924ec796b161886, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 616187ff436fa1a4398476fd693a7db9, type: 2}
+    - target: {fileID: 3964424775446516987, guid: 5392b6213c2524d4e924ec796b161886, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5290803507670964741, guid: 5392b6213c2524d4e924ec796b161886, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043361694742427929, guid: 5392b6213c2524d4e924ec796b161886, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043361694742427929, guid: 5392b6213c2524d4e924ec796b161886, type: 3}
+      propertyPath: m_DefaultControlScheme
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043361694742427929, guid: 5392b6213c2524d4e924ec796b161886, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043361694742427929, guid: 5392b6213c2524d4e924ec796b161886, type: 3}
+      propertyPath: m_NeverAutoSwitchControlSchemes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043361694742427929, guid: 5392b6213c2524d4e924ec796b161886, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionId
+      value: f18ba0cc-34ff-4ad3-b817-949cbc25ee36
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043361694742427929, guid: 5392b6213c2524d4e924ec796b161886, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
+      value: 5be7a901-b875-4cd2-86a7-3d22b2e2bf6f
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043361694742427929, guid: 5392b6213c2524d4e924ec796b161886, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionName
+      value: Player/Walk[/DualShock4GamepadHID/leftStick,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/DualShock4GamepadHID/dpad/up,/DualShock4GamepadHID/dpad/down,/DualShock4GamepadHID/dpad/left,/DualShock4GamepadHID/dpad/right]
+      objectReference: {fileID: 0}
+    - target: {fileID: 6043361694742427929, guid: 5392b6213c2524d4e924ec796b161886, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
+      value: Player/Action[/Keyboard/space,/DualShock4GamepadHID/buttonSouth]
       objectReference: {fileID: 0}
     - target: {fileID: 7381086418291334394, guid: 5392b6213c2524d4e924ec796b161886, type: 3}
       propertyPath: m_RootOrder
