@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +8,7 @@ namespace LavaTower
     {
         public float timeRemaining = 10;
         public bool timerIsRunning = false;
-        public Text timeText;
+        public TextMeshProUGUI timeText;
 
         private void Start()
         {
