@@ -1,26 +1,36 @@
+using System.Collections.Generic;
+using Menu;
 using UnityEngine;
 
 namespace LavaTower
 {
     public class CameraFollow : MonoBehaviour
     {
-        public GameObject player;
-
-        private Vector3 offset;
+        private readonly List<Transform> players = new List<Transform>();
 
         private void Start()
         {
-            offset = transform.position - player.transform.position;
+            var controllers = FindObjectsOfType<PlayerController>();
+            foreach (var player in controllers)
+            {
+                players.Add(player.transform);
+            }
         }
 
         private void LateUpdate()
         {
-            if (!player)
+            players.RemoveAll(player => player == null);
+            var position = transform.position;
+            foreach (var player in players)
             {
-                enabled = false;
-                return;
+                var playerHeight = player.position.y;
+                if (playerHeight > position.y)
+                {
+                    position.y = playerHeight;
+                }
             }
-            transform.position = player.transform.position + offset;
+
+            transform.position = position;
         }
     }
 }
