@@ -445,7 +445,7 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
-  playerPrefab: {fileID: 3464999813558893267, guid: db5feed04d3dc794ea87b22bdbe7bb84, type: 3}
+  playerPrefab: {fileID: 7337511359688977108, guid: 0b26cd254cd21024d8853a8d5e8fae2f, type: 3}
 --- !u!4 &648342340
 Transform:
   m_ObjectHideFlags: 0
@@ -634,7 +634,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 933678954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 3.34, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1065,6 +1065,7 @@ GameObject:
   - component: {fileID: 1812977167}
   - component: {fileID: 1812977166}
   - component: {fileID: 1812977165}
+  - component: {fileID: 1812977169}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -1144,11 +1145,30 @@ Transform:
   m_GameObject: {fileID: 1812977164}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.5, y: 3, z: 8.75}
-  m_LocalScale: {x: 5, y: 5, z: 10}
+  m_LocalScale: {x: 4.9, y: 4.9, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1812977169
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812977164}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 006bddc33a5094b43be1aafee652d40d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1817961971
 GameObject:
   m_ObjectHideFlags: 0
