@@ -1,6 +1,7 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace LavaTower
 {
@@ -9,6 +10,7 @@ namespace LavaTower
         public float timeRemaining = 10;
         public bool timerIsRunning = false;
         public TextMeshProUGUI timeText;
+        public TextMeshProUGUI timeRunoutText;
 
         private void Start()
         {
@@ -26,13 +28,20 @@ namespace LavaTower
                 }
                 else
                 {
-                    Debug.Log("Time has run out!");
+                    timeRunoutText.enabled = true;
+                    StartCoroutine(LevelLoad());
                     timeRemaining = 0;
                     timerIsRunning = false;
                 }
             }
         }
 
+        IEnumerator LevelLoad()
+        {
+            yield return new WaitForSeconds(2.0f);
+            SceneManager.LoadScene("Scenes/Menu");
+        }
+        
         private void DisplayTime(float timeToDisplay)
         {
             timeToDisplay += 1;
