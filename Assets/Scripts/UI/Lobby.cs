@@ -9,6 +9,7 @@ namespace UI
 {
     public class Lobby : Menu
     {
+        [SerializeField] private string scene;
         [SerializeField] private Canvas mainMenu;
         [SerializeField] private Button startButton;
         [SerializeField] private RectTransform panel;
