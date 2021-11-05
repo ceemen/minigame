@@ -10,6 +10,12 @@ public class PlatformSpawner : MonoBehaviour
     void Start()
     {
         var whereSpawn = Random.Range(0, prefabList.Count);
+        var amountSpawn = Random.Range(1, prefabList.Count);
+
+        //for(int i = 0; i < amountSpawn; i++)
+        //{
+        //    i = 
+        //}
 
         switch (whereSpawn)
         {
