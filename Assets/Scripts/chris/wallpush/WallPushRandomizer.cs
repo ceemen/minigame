@@ -21,7 +21,7 @@ public class WallPushRandomizer : MonoBehaviour
             int numToPush = Random.Range(0, wallRocks.Length);
             Debug.Log(numToPush);
             SelectWallToPush(numToPush);
-            delay = 1.0f;
+            delay = 0.5f;
         }
 
         delay -= Time.deltaTime;
