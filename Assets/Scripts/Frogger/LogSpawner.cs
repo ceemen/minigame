@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LogSpawner : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> prefabList;
+    [SerializeField] private List<GameObject> SpawnerList;
 
     public GameObject Log;
 
@@ -23,8 +23,8 @@ public class LogSpawner : MonoBehaviour
     {
         if (Time.time < _nextSpawn)
             return;
-        var whatSpawns = Random.Range(0, prefabList.Count);
-        Instantiate(Log, prefabList[whatSpawns].transform.position, prefabList[whatSpawns].transform.rotation);
+        int whatSpawns = Random.Range(0, SpawnerList.Count);
+        Instantiate(Log, SpawnerList[whatSpawns].transform.position, SpawnerList[whatSpawns].transform.rotation);
         _nextSpawn = Time.time + Random.Range(minSpawnRate, maxSpawnRate);
     }
 }

@@ -6,7 +6,7 @@ namespace Menu
     public class PlayerControllerFrogger : MonoBehaviour
     {
         private const float RunSpeed = 4;
-        private const float JumpHeight = 4;
+        private const float JumpHeight = 5;
 
         [SerializeField] private PlayerAnimation playerAnimation;
 

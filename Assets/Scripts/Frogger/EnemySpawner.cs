@@ -6,20 +6,43 @@ namespace Frogger
     public class EnemySpawner : MonoBehaviour
     {
         [SerializeField] private List<GameObject> prefabList;
+        [SerializeField] private List<GameObject> SpawnerList;
 
-        public float minSpawnRate = 2.5f;
-        public float maxSpawnRate = 5f;
+        public float minSpawnRate;
+        public float maxSpawnRate;
 
         private float _nextSpawn;
+
+        void Start()
+        {
+            _nextSpawn = Time.time + Random.Range(0, 5);
+        }
 
         // Update is called once per frame
         private void Update()
         {
             if (Time.time < _nextSpawn)
                 return;
-            var whatSpawns = Random.Range(0, prefabList.Count);
-            Instantiate(prefabList[whatSpawns], transform.position, transform.rotation);
-            _nextSpawn = Time.time + Random.Range(minSpawnRate, maxSpawnRate);
+            int whereSpawns = Random.Range(0, SpawnerList.Count);
+            int whatSpawns = Random.Range(0, prefabList.Count);
+
+            switch(whereSpawns)
+            {
+                case 1:
+                    Instantiate(prefabList[whatSpawns], SpawnerList[whereSpawns].transform.position, SpawnerList[whereSpawns].transform.rotation);
+                    _nextSpawn = Time.time + Random.Range(minSpawnRate, maxSpawnRate);
+                    break;
+                case 2:
+                    Instantiate(prefabList[whatSpawns], SpawnerList[whereSpawns].transform.position, SpawnerList[whereSpawns].transform.rotation);
+                    _nextSpawn = Time.time + Random.Range(minSpawnRate, maxSpawnRate);
+                    break;
+                default:
+                    Instantiate(prefabList[whatSpawns], SpawnerList[whereSpawns].transform.position, SpawnerList[whereSpawns].transform.rotation);
+                    _nextSpawn = Time.time + Random.Range(minSpawnRate, maxSpawnRate);
+                    break;
+            }
+            //Instantiate(prefabList[whatSpawns], transform.position, transform.rotation);
+            //_nextSpawn = Time.time + Random.Range(minSpawnRate, maxSpawnRate);
         }
     }
 }
