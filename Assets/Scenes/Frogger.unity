@@ -948,6 +948,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 989590774}
     m_Modifications:
+    - target: {fileID: 397794465002305708, guid: ab17be28462a82a47b8f9f862f553c78, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 397794465002305708, guid: ab17be28462a82a47b8f9f862f553c78, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 397794465002305708, guid: ab17be28462a82a47b8f9f862f553c78, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 689470713924198539, guid: ab17be28462a82a47b8f9f862f553c78, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -1008,6 +1020,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3049929683283372690, guid: ab17be28462a82a47b8f9f862f553c78, type: 3}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 1359110694}
+    - target: {fileID: 3049929683283372690, guid: ab17be28462a82a47b8f9f862f553c78, type: 3}
+      propertyPath: endFlair
+      value: 
+      objectReference: {fileID: 622128626}
     - target: {fileID: 5166751961098775849, guid: ab17be28462a82a47b8f9f862f553c78, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -1074,6 +1094,11 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2859194311967815122, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
   m_PrefabInstance: {fileID: 155595382}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &622128626 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 397794465002305708, guid: ab17be28462a82a47b8f9f862f553c78, type: 3}
+  m_PrefabInstance: {fileID: 491925193}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &629884077
 PrefabInstance:
@@ -2813,7 +2838,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
