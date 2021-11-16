@@ -342,12 +342,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed77593a82cb5014488be9863c7c4453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabList:
+  spawnerList:
   - {fileID: 979499406333353653}
-  - {fileID: 9192938717895455946}
-  - {fileID: 6040142819730315543}
   - {fileID: 4552780201586237225}
   - {fileID: 57453266860590428}
+  - {fileID: 9192938717895455946}
+  - {fileID: 6040142819730315543}
   platform: {fileID: 5392087401393717419, guid: 60e084f3e1265af419bfcb95344faf83, type: 3}
 --- !u!114 &7286989508914253959
 MonoBehaviour:

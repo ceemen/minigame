@@ -4,39 +4,38 @@ using UnityEngine;
 
 public class PlatformSpawner : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> prefabList;
+    [SerializeField] private List<GameObject> spawnerList;
 
     public GameObject platform;
 
+    bool check = false;
+
     void Start()
     {
-        int amountSpawn = Random.Range(1, prefabList.Count);
+        int amountSpawn = Random.Range(1, spawnerList.Count);
+        int[] spawned = new int[5] { -1, -1, -1, -1, -1 };
 
         for (int i = 0; i < amountSpawn; i++)
         {
-            int whereSpawn = Random.Range(0, prefabList.Count);
+            int whereSpawn = Random.Range(0, spawnerList.Count);
 
-            switch (whereSpawn)
+            do
             {
-                case 1:
-                    Instantiate(platform, prefabList[whereSpawn].transform.position, prefabList[whereSpawn].transform.rotation);
-                    break;
-                case 2:
-                    Instantiate(platform, prefabList[whereSpawn].transform.position, prefabList[whereSpawn].transform.rotation);
-                    break;
-                case 3:
-                    Instantiate(platform, prefabList[whereSpawn].transform.position, prefabList[whereSpawn].transform.rotation);
-                    break;
-                case 4:
-                    Instantiate(platform, prefabList[whereSpawn].transform.position, prefabList[whereSpawn].transform.rotation);
-                    break;
-                case 5:
-                    Instantiate(platform, prefabList[whereSpawn].transform.position, prefabList[whereSpawn].transform.rotation);
-                    break;
-                default:
-                    Instantiate(platform, prefabList[whereSpawn].transform.position, prefabList[whereSpawn].transform.rotation);
-                    break;
-            }
+                check = true;
+
+                whereSpawn = Random.Range(0, spawnerList.Count);
+
+                for (int j = 0; j < spawned.Length; j++)
+                {
+                    if (whereSpawn == spawned[j])
+                    {
+                        check = false;
+                    }
+                }
+            } while (!check);
+
+            Instantiate(platform, spawnerList[whereSpawn].transform.position, spawnerList[whereSpawn].transform.rotation);
+            spawned[i] = whereSpawn;
         }
     }
 }
