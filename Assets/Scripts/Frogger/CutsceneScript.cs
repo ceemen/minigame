@@ -9,27 +9,23 @@ public class CutsceneScript : MonoBehaviour
     public GameObject camera3;
     public GameObject camera4;
 
-    //private GameObject[] players;
-
-    //private PlayerControllerFrogger controls;
-
+	private GameObject[] players;// = GameObject.FindGameObjectsWithTag("Player");
+	
     // Start is called before the first frame update
     void Start()
     {
-        //players = GameObject.FindGameObjectsWithTag("Player");
-
-        //for(int i = 0; i < players.Length; i++)
-        //{
-        //    controls = players.GetComponent(typeof(PlayerControllerFrogger));
-        //}
-
+		players = GameObject.FindGameObjectsWithTag("Player");
+		for(int i = 0; i < players.Length; i++)
+		{
+			MonoBehaviour script = players[i].GetComponent("PlayerControllerFrogger")as MonoBehaviour;
+			script.enabled = false;
+		}
+		
         StartCoroutine(TheSequence());
     }
 
    IEnumerator TheSequence()
     {
-        //controls.SetActive(false);
-
         yield return new WaitForSeconds(1);
 
         camera2.SetActive(true);
@@ -44,6 +40,12 @@ public class CutsceneScript : MonoBehaviour
 
         camera4.SetActive(true);
         camera3.SetActive(false);
-       // controls.SetActive(true);
+		
+		players = GameObject.FindGameObjectsWithTag("Player");
+		for(int i = 0; i < players.Length; i++)
+		{
+			MonoBehaviour script = players[i].GetComponent("PlayerControllerFrogger")as MonoBehaviour;
+			script.enabled = true;
+		}
     }
 }
