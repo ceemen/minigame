@@ -1,7 +1,8 @@
+using Menu;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace Menu
+namespace Frogger
 {
     public class PlayerControllerFrogger : MonoBehaviour
     {
