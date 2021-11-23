@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    private float speed;
 
-    public float minSpeed = 30;
-    public float maxSpeed = 50;
-    public float deleteTime = 2f;
+    [SerializeField] private float minSpeed;
+    [SerializeField] private float maxSpeed;
+    [SerializeField] private float deleteTime;
 
     // Start is called before the first frame update
     void Start()

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class End : MonoBehaviour
 {
-    public AudioSource music;
-    public AudioSource endFlair;
+    [SerializeField] private AudioSource music;
+    [SerializeField] private AudioSource endFlair;
 
     void OnCollisionEnter(Collision collision)
     {

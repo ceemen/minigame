@@ -6,9 +6,9 @@ public class LogMove : MonoBehaviour
 {
     private float speed;
 
-    public float minSpeed;
-    public float maxSpeed;
-    public float deleteTime;
+    [SerializeField] private float minSpeed;
+    [SerializeField] private float maxSpeed;
+    [SerializeField] private float deleteTime;
 
     // Start is called before the first frame update
     void Start()

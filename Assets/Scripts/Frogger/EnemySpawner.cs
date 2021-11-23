@@ -8,8 +8,8 @@ namespace Frogger
         [SerializeField] private List<GameObject> prefabList;
         [SerializeField] private List<GameObject> SpawnerList;
 
-        public float minSpawnRate;
-        public float maxSpawnRate;
+        [SerializeField] private float minSpawnRate;
+        [SerializeField] private float maxSpawnRate;
 
         private float _nextSpawn;
 
@@ -41,8 +41,6 @@ namespace Frogger
                     _nextSpawn = Time.time + Random.Range(minSpawnRate, maxSpawnRate);
                     break;
             }
-            //Instantiate(prefabList[whatSpawns], transform.position, transform.rotation);
-            //_nextSpawn = Time.time + Random.Range(minSpawnRate, maxSpawnRate);
         }
     }
 }

@@ -1,25 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Menu;
 
 public class CameraPan : MonoBehaviour
 {
-    public float speed = 2f;
-    private float delayCamera = 2f;
+    [SerializeField] private Vector3 offset;
+    private readonly List<Transform> players = new List<Transform>();
 
-    private float timeElapsed;
-
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        timeElapsed += Time.deltaTime;
-
-        if(timeElapsed > delayCamera)
+        var controllers = FindObjectsOfType<PlayerControllerFrogger>();
+        foreach (var player in controllers)
         {
-            if (transform.position.z <= 70)
-            {
-                transform.position += Vector3.forward * Time.deltaTime * speed;
-            }
+            players.Add(player.transform);
         }
+    }
+
+    private void LateUpdate()
+    {
+        players.RemoveAll(player => player == null);
+        var position = transform.position;
+        foreach (var player in players)
+        {
+            var playerDistance = player.position.z;
+            
+            if (playerDistance <= position.z - offset.z)
+                return;
+            position.z = playerDistance;
+        }
+        transform.position = position + offset;
     }
 }

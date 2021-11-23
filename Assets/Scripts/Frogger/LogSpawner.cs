@@ -6,10 +6,10 @@ public class LogSpawner : MonoBehaviour
 {
     [SerializeField] private List<GameObject> SpawnerList;
 
-    public GameObject Log;
+    [SerializeField] private GameObject Log;
 
-    public float minSpawnRate;
-    public float maxSpawnRate;
+    [SerializeField] private float minSpawnRate;
+    [SerializeField] private float maxSpawnRate;
 
     private float _nextSpawn;
 

@@ -6,7 +6,7 @@ public class PlatformSpawner : MonoBehaviour
 {
     [SerializeField] private List<GameObject> spawnerList;
 
-    public GameObject platform;
+    [SerializeField] private GameObject platform;
 
     bool check = false;
 
