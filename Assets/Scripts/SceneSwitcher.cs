@@ -14,6 +14,8 @@ public class SceneSwitcher : MonoBehaviour
             SceneManager.LoadScene(TargetScene);
             _started = true;
         }
+        else if (inMenu)
+            _started = true;
         // Otherwise nothing to do
         else
             Destroy(gameObject);
