@@ -10,7 +10,7 @@ namespace LavaTower
 
         private void Start()
         {
-            var controllers = FindObjectsOfType<PlayerController>();
+            var controllers = FindObjectsOfType<PlayerControllerLavaTower>();
             foreach (var player in controllers)
             {
                 players.Add(player.transform);
