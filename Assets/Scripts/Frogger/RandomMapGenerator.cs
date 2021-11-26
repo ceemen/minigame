@@ -17,34 +17,34 @@ public class RandomMapGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        RNG = Random.Range(1, 9);
+        RNG = Random.Range(1, 8);
 
-        if(RNG <= 4)
+        if(RNG <= 3)
         {
             Instantiate(safefloor, transform.position, transform.rotation);
         }
 
-        if (RNG == 5)
+        if (RNG == 4)
         {
             Instantiate(PLava, transform.position, transform.rotation);
         }
 
-        if (RNG == 6)
+        if (RNG == 5)
         {
             Instantiate(LLogLava, transform.position, transform.rotation);
         }
 
-        if (RNG == 7)
+        if (RNG == 6)
         {
             Instantiate(RLogLava, transform.position, transform.rotation);
         }
 
-        if (RNG == 8)
+        if (RNG == 7)
         {
             Instantiate(LRoad, transform.position, transform.rotation);
         }
 
-        if (RNG == 9)
+        if (RNG == 8)
         {
             Instantiate(RRoad, transform.position, transform.rotation);
         }
