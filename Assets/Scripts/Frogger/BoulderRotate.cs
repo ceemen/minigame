@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class BoulderRotate : MonoBehaviour
 {
-    public GameObject playerDecal;
+    [SerializeField] private GameObject playerDecal;
 
-	public int spinSpeed = 100;
+    [SerializeField] private int spinSpeed = 100;
 
     // Update is called once per frame
     void Update()

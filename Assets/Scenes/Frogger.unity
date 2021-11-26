@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1836263, g: 0.22787574, b: 0.2980485, a: 1}
+  m_IndirectSpecularColor: {r: 0.17919812, g: 0.2243824, b: 0.3061306, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,6 +123,71 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &39408091
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2913367432902255216, guid: 9c636108beddc1840bb1916edd79c68a, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913367432902255216, guid: 9c636108beddc1840bb1916edd79c68a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913367432902255216, guid: 9c636108beddc1840bb1916edd79c68a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913367432902255216, guid: 9c636108beddc1840bb1916edd79c68a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913367432902255216, guid: 9c636108beddc1840bb1916edd79c68a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913367432902255216, guid: 9c636108beddc1840bb1916edd79c68a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913367432902255216, guid: 9c636108beddc1840bb1916edd79c68a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913367432902255216, guid: 9c636108beddc1840bb1916edd79c68a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913367432902255216, guid: 9c636108beddc1840bb1916edd79c68a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913367432902255216, guid: 9c636108beddc1840bb1916edd79c68a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913367432902255216, guid: 9c636108beddc1840bb1916edd79c68a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913367432902255216, guid: 9c636108beddc1840bb1916edd79c68a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913367432902255216, guid: 9c636108beddc1840bb1916edd79c68a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913367432902255228, guid: 9c636108beddc1840bb1916edd79c68a, type: 3}
+      propertyPath: m_Name
+      value: Lava
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9c636108beddc1840bb1916edd79c68a, type: 3}
 --- !u!1001 &52562035
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -252,8 +317,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LRoad
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: PLava
+      value: 
+      objectReference: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RRoad
+      value: 
+      objectReference: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLogLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLogLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: safefloor
+      value: 
+      objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.data[0]
@@ -271,6 +368,14 @@ PrefabInstance:
       propertyPath: spawn.Array.data[3]
       value: 
       objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
     - target: {fileID: 4720786706448185881, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -345,8 +450,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LRoad
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: PLava
+      value: 
+      objectReference: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RRoad
+      value: 
+      objectReference: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLogLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLogLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: safefloor
+      value: 
+      objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.data[0]
@@ -364,6 +501,14 @@ PrefabInstance:
       propertyPath: spawn.Array.data[3]
       value: 
       objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
     - target: {fileID: 4720786706448185881, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -511,8 +656,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LRoad
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: PLava
+      value: 
+      objectReference: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RRoad
+      value: 
+      objectReference: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLogLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLogLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: safefloor
+      value: 
+      objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.data[0]
@@ -530,6 +707,14 @@ PrefabInstance:
       propertyPath: spawn.Array.data[3]
       value: 
       objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
     - target: {fileID: 4720786706448185881, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -604,8 +789,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LRoad
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: PLava
+      value: 
+      objectReference: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RRoad
+      value: 
+      objectReference: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLogLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLogLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: safefloor
+      value: 
+      objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.data[0]
@@ -623,6 +840,14 @@ PrefabInstance:
       propertyPath: spawn.Array.data[3]
       value: 
       objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
     - target: {fileID: 4720786706448185881, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -708,7 +933,7 @@ Transform:
   - {fileID: 1747113834}
   - {fileID: 1744736523}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &256360922 stripped
 Transform:
@@ -846,7 +1071,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &333103724 stripped
 Transform:
@@ -1181,11 +1406,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e787eac7ada2fb44b29a77d071befa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawn:
-  - {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
-  - {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
-  - {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
-  - {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+  safefloor: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+  PLava: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+  LLogLava: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+  RLogLava: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+  LRoad: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+  RRoad: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
 --- !u!4 &567892954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2859194311967815122, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
@@ -1252,8 +1478,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LRoad
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: PLava
+      value: 
+      objectReference: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RRoad
+      value: 
+      objectReference: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLogLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLogLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: safefloor
+      value: 
+      objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.data[0]
@@ -1271,6 +1529,14 @@ PrefabInstance:
       propertyPath: spawn.Array.data[3]
       value: 
       objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
     - target: {fileID: 4720786706448185881, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -1580,7 +1846,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &789345080
 MonoBehaviour:
@@ -1718,13 +1984,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 819953263}
-  m_LocalRotation: {x: 0.2164396, y: 0, z: 0, w: 0.97629607}
+  m_LocalRotation: {x: 0.4543015, y: 0, z: 0, w: 0.89084804}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 25, y: 0, z: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 54.04, y: 0, z: 0}
 --- !u!4 &863992767 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1439092904364624424, guid: 4539af7124306634b8e85bcb6126c291, type: 3}
@@ -1869,8 +2135,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LRoad
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: PLava
+      value: 
+      objectReference: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RRoad
+      value: 
+      objectReference: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLogLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLogLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: safefloor
+      value: 
+      objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.data[0]
@@ -1888,6 +2186,14 @@ PrefabInstance:
       propertyPath: spawn.Array.data[3]
       value: 
       objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
     - target: {fileID: 4720786706448185881, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -1962,8 +2268,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LRoad
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: PLava
+      value: 
+      objectReference: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RRoad
+      value: 
+      objectReference: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLogLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLogLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: safefloor
+      value: 
+      objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.data[0]
@@ -1981,6 +2319,14 @@ PrefabInstance:
       propertyPath: spawn.Array.data[3]
       value: 
       objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
     - target: {fileID: 4720786706448185881, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -2133,8 +2479,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LRoad
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: PLava
+      value: 
+      objectReference: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RRoad
+      value: 
+      objectReference: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLogLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLogLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: safefloor
+      value: 
+      objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.data[0]
@@ -2152,6 +2530,14 @@ PrefabInstance:
       propertyPath: spawn.Array.data[3]
       value: 
       objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
     - target: {fileID: 4720786706448185881, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -2226,8 +2612,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LRoad
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: PLava
+      value: 
+      objectReference: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RRoad
+      value: 
+      objectReference: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLogLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLogLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: safefloor
+      value: 
+      objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.data[0]
@@ -2245,6 +2663,14 @@ PrefabInstance:
       propertyPath: spawn.Array.data[3]
       value: 
       objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
     - target: {fileID: 4720786706448185881, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -2319,8 +2745,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LRoad
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: PLava
+      value: 
+      objectReference: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RRoad
+      value: 
+      objectReference: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLogLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLogLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: safefloor
+      value: 
+      objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.data[0]
@@ -2338,6 +2796,14 @@ PrefabInstance:
       propertyPath: spawn.Array.data[3]
       value: 
       objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
     - target: {fileID: 4720786706448185881, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -2412,8 +2878,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LRoad
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: PLava
+      value: 
+      objectReference: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RRoad
+      value: 
+      objectReference: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLogLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLogLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: safefloor
+      value: 
+      objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.data[0]
@@ -2431,6 +2929,14 @@ PrefabInstance:
       propertyPath: spawn.Array.data[3]
       value: 
       objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
     - target: {fileID: 4720786706448185881, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -2521,7 +3027,7 @@ Transform:
   - {fileID: 491925194}
   - {fileID: 809149358}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1053216565
 PrefabInstance:
@@ -2579,8 +3085,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LRoad
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: PLava
+      value: 
+      objectReference: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RRoad
+      value: 
+      objectReference: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLogLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLogLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: safefloor
+      value: 
+      objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.data[0]
@@ -2598,6 +3136,14 @@ PrefabInstance:
       propertyPath: spawn.Array.data[3]
       value: 
       objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
     - target: {fileID: 4720786706448185881, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -2760,8 +3306,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LRoad
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: PLava
+      value: 
+      objectReference: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RRoad
+      value: 
+      objectReference: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLogLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLogLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: safefloor
+      value: 
+      objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.data[0]
@@ -2779,6 +3357,14 @@ PrefabInstance:
       propertyPath: spawn.Array.data[3]
       value: 
       objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
     - target: {fileID: 4720786706448185881, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -2853,8 +3439,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LRoad
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: PLava
+      value: 
+      objectReference: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RRoad
+      value: 
+      objectReference: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLogLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLogLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: safefloor
+      value: 
+      objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.data[0]
@@ -2872,6 +3490,14 @@ PrefabInstance:
       propertyPath: spawn.Array.data[3]
       value: 
       objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
     - target: {fileID: 4720786706448185881, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -2946,8 +3572,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LRoad
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: PLava
+      value: 
+      objectReference: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RRoad
+      value: 
+      objectReference: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLogLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLogLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: safefloor
+      value: 
+      objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.data[0]
@@ -2965,6 +3623,14 @@ PrefabInstance:
       propertyPath: spawn.Array.data[3]
       value: 
       objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
     - target: {fileID: 4720786706448185881, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -3039,8 +3705,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LRoad
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: PLava
+      value: 
+      objectReference: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RRoad
+      value: 
+      objectReference: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLogLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLogLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: safefloor
+      value: 
+      objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.data[0]
@@ -3058,6 +3756,14 @@ PrefabInstance:
       propertyPath: spawn.Array.data[3]
       value: 
       objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
     - target: {fileID: 4720786706448185881, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -3206,7 +3912,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1379684049 stripped
 Transform:
@@ -3436,8 +4142,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LRoad
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: PLava
+      value: 
+      objectReference: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RRoad
+      value: 
+      objectReference: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLogLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLogLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: safefloor
+      value: 
+      objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.data[0]
@@ -3455,6 +4193,14 @@ PrefabInstance:
       propertyPath: spawn.Array.data[3]
       value: 
       objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
     - target: {fileID: 4720786706448185881, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -4175,8 +4921,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LRoad
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: PLava
+      value: 
+      objectReference: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RRoad
+      value: 
+      objectReference: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLogLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLogLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: safefloor
+      value: 
+      objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.data[0]
@@ -4194,6 +4972,14 @@ PrefabInstance:
       propertyPath: spawn.Array.data[3]
       value: 
       objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
     - target: {fileID: 4720786706448185881, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -4268,8 +5054,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LRoad
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: PLava
+      value: 
+      objectReference: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RRoad
+      value: 
+      objectReference: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLogLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLogLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: safefloor
+      value: 
+      objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.data[0]
@@ -4287,6 +5105,14 @@ PrefabInstance:
       propertyPath: spawn.Array.data[3]
       value: 
       objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
     - target: {fileID: 4720786706448185881, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -4361,8 +5187,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LRoad
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: PLava
+      value: 
+      objectReference: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RRoad
+      value: 
+      objectReference: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLogLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLogLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: safefloor
+      value: 
+      objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.data[0]
@@ -4380,6 +5238,14 @@ PrefabInstance:
       propertyPath: spawn.Array.data[3]
       value: 
       objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
     - target: {fileID: 4720786706448185881, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -4532,8 +5398,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LRoad
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: PLava
+      value: 
+      objectReference: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RRoad
+      value: 
+      objectReference: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLogLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLogLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: safefloor
+      value: 
+      objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.data[0]
@@ -4551,6 +5449,14 @@ PrefabInstance:
       propertyPath: spawn.Array.data[3]
       value: 
       objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
     - target: {fileID: 4720786706448185881, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -4699,8 +5605,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LRoad
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: PLava
+      value: 
+      objectReference: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RRoad
+      value: 
+      objectReference: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLogLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLogLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: safefloor
+      value: 
+      objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.data[0]
@@ -4718,6 +5656,14 @@ PrefabInstance:
       propertyPath: spawn.Array.data[3]
       value: 
       objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
     - target: {fileID: 4720786706448185881, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -4802,8 +5748,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LRoad
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: PLava
+      value: 
+      objectReference: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RRoad
+      value: 
+      objectReference: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLogLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLogLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: safefloor
+      value: 
+      objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.data[0]
@@ -4821,6 +5799,14 @@ PrefabInstance:
       propertyPath: spawn.Array.data[3]
       value: 
       objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
     - target: {fileID: 4720786706448185881, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -4895,8 +5881,40 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LRoad
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: PLava
+      value: 
+      objectReference: {fileID: 4088021647920035034, guid: f32ded1f42d04044db71be8fcf502351, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RRoad
+      value: 
+      objectReference: {fileID: 8178621009590730269, guid: cc6c88997320b5b4398060bd8fbde89a, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: LLogLava
+      value: 
+      objectReference: {fileID: 6743838310927066683, guid: fc74e4f90837f0949857bcc2b8d0b771, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: RLogLava
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: safefloor
+      value: 
+      objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: spawn.Array.data[0]
@@ -4914,6 +5932,14 @@ PrefabInstance:
       propertyPath: spawn.Array.data[3]
       value: 
       objectReference: {fileID: 2106117646482491482, guid: 026a6ec7e376aef43a2840035b8ff3b5, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[4]
+      value: 
+      objectReference: {fileID: 8344819204882329783, guid: cc26114847cc5e641aec246a18c2ea8e, type: 3}
+    - target: {fileID: 3749524087915387349, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
+      propertyPath: spawn.Array.data[5]
+      value: 
+      objectReference: {fileID: 4799667041812761064, guid: 69f55628f2bb93a4981eeb167ad94127, type: 3}
     - target: {fileID: 4720786706448185881, guid: 0d15efd8964ef8049a74c0e319c631de, type: 3}
       propertyPath: m_Layer
       value: 6

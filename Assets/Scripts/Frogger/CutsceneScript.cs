@@ -6,10 +6,10 @@ using UnityEngine;
 
 public class CutsceneScript : MonoBehaviour
 {
-    public GameObject camera1;
-    public GameObject camera2;
-    public GameObject camera3;
-    public GameObject camera4;
+    [SerializeField] private GameObject camera1;
+    [SerializeField] private GameObject camera2;
+    [SerializeField] private GameObject camera3;
+    [SerializeField] private GameObject camera4;
 
 	private PlayerControllerFrogger[] players;// = GameObject.FindGameObjectsWithTag("Player");
 	
@@ -24,17 +24,17 @@ public class CutsceneScript : MonoBehaviour
 
    IEnumerator TheSequence()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.7f);
 
         camera2.SetActive(true);
         camera1.SetActive(false);
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(1f);
 
         camera3.SetActive(true);
         camera2.SetActive(false);
 
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(2f);
 
         camera4.SetActive(true);
         camera3.SetActive(false);

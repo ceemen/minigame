@@ -6,7 +6,6 @@ namespace Frogger
     public class EnemySpawner : MonoBehaviour
     {
         [SerializeField] private List<GameObject> prefabList;
-        [SerializeField] private List<GameObject> SpawnerList;
 
         [SerializeField] private float minSpawnRate;
         [SerializeField] private float maxSpawnRate;
@@ -15,7 +14,7 @@ namespace Frogger
 
         void Start()
         {
-            _nextSpawn = Time.time + Random.Range(0, 5);
+            _nextSpawn = Time.time + Random.Range(0, 4);
         }
 
         // Update is called once per frame
@@ -23,21 +22,20 @@ namespace Frogger
         {
             if (Time.time < _nextSpawn)
                 return;
-            int whereSpawns = Random.Range(0, SpawnerList.Count);
             int whatSpawns = Random.Range(0, prefabList.Count);
 
-            switch(whereSpawns)
+            switch(whatSpawns)
             {
                 case 1:
-                    Instantiate(prefabList[whatSpawns], SpawnerList[whereSpawns].transform.position, SpawnerList[whereSpawns].transform.rotation);
+                    Instantiate(prefabList[whatSpawns], transform.position, transform.rotation);
                     _nextSpawn = Time.time + Random.Range(minSpawnRate, maxSpawnRate);
                     break;
                 case 2:
-                    Instantiate(prefabList[whatSpawns], SpawnerList[whereSpawns].transform.position, SpawnerList[whereSpawns].transform.rotation);
+                    Instantiate(prefabList[whatSpawns], transform.position, transform.rotation);
                     _nextSpawn = Time.time + Random.Range(minSpawnRate, maxSpawnRate);
                     break;
                 default:
-                    Instantiate(prefabList[whatSpawns], SpawnerList[whereSpawns].transform.position, SpawnerList[whereSpawns].transform.rotation);
+                    Instantiate(prefabList[whatSpawns], transform.position, transform.rotation);
                     _nextSpawn = Time.time + Random.Range(minSpawnRate, maxSpawnRate);
                     break;
             }

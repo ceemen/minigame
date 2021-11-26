@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class LogSpawner : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> SpawnerList;
-
     [SerializeField] private GameObject Log;
 
     [SerializeField] private float minSpawnRate;
@@ -15,7 +13,7 @@ public class LogSpawner : MonoBehaviour
 
     void Start()
     {
-        _nextSpawn = Time.time + Random.Range(0, 5);
+        _nextSpawn = Time.time + Random.Range(0, 3);
     }
 
     // Update is called once per frame
@@ -23,8 +21,7 @@ public class LogSpawner : MonoBehaviour
     {
         if (Time.time < _nextSpawn)
             return;
-        int whatSpawns = Random.Range(0, SpawnerList.Count);
-        Instantiate(Log, SpawnerList[whatSpawns].transform.position, SpawnerList[whatSpawns].transform.rotation);
+        Instantiate(Log, transform.position, transform.rotation);
         _nextSpawn = Time.time + Random.Range(minSpawnRate, maxSpawnRate);
     }
 }
