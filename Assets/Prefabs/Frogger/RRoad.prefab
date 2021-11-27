@@ -337,6 +337,8 @@ MonoBehaviour:
   - {fileID: 4427625928517086707, guid: b5d79cc057e8e5a458d690d8756223cc, type: 3}
   minSpawnRate: 4
   maxSpawnRate: 8
+  minSpeed: 5
+  maxSpeed: 10
 --- !u!1 &8178621009590730269
 GameObject:
   m_ObjectHideFlags: 0

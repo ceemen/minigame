@@ -14,7 +14,7 @@ namespace Frogger
 
         void Start()
         {
-            _nextSpawn = Time.time + Random.Range(0, 4);
+            _nextSpawn = Time.time + Random.Range(0, 3);
         }
 
         // Update is called once per frame
@@ -24,7 +24,7 @@ namespace Frogger
                 return;
             int whatSpawns = Random.Range(0, prefabList.Count);
 
-            switch(whatSpawns)
+            switch (whatSpawns)
             {
                 case 1:
                     Instantiate(prefabList[whatSpawns], transform.position, transform.rotation);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    [SerializeField] private float speed;
+    [SerializeField] public float speed;
 
     [SerializeField] private float deleteTime;
 
