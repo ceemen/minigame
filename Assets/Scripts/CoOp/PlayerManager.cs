@@ -58,5 +58,10 @@ namespace CoOp
             _players.Add(newPlayerData);
             return true;
         }
+
+        public void AddScore(int playerIndex, int amount)
+        {
+            _players[playerIndex].AddScore(amount);
+        }
     }
 }
