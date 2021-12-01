@@ -15,6 +15,8 @@ namespace CoOp
         };
 
         private readonly List<PlayerData> _players = new List<PlayerData>();
+        // Keeps track of the last winner
+        private int _winner = 0;
 
         public static PlayerManager GetInstance()
         {
@@ -26,9 +28,14 @@ namespace CoOp
             return PlayerColours[playerIndex % PlayerColours.Length];
         }
 
-        public List<PlayerData> GetPlayers()
+        public PlayerData[] GetPlayers()
         {
-            return _players;
+            return _players.ToArray();
+        }
+
+        public int GetWinner()
+        {
+            return _winner;
         }
 
         private void Awake()

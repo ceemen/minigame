@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,22 +11,32 @@ namespace CoOp
         [SerializeField] private GameObject playerPrefab;
         private readonly List<GameObject> _players = new List<GameObject>();
 
-        private void Awake()
+        private void Start()
         {
             var players = PlayerManager.GetInstance().GetPlayers();
-            for (var p = 0; p < players.Count; p++)
+            SpawnPlayers(players);
+        }
+
+        protected virtual void SpawnPlayers(PlayerData[] players)
+        {
+            for (var p = 0; p < players.Length; p++)
             {
-                var player = players[p];
-                var newPlayer = PlayerInput.Instantiate(
-                    playerPrefab,
-                    -1,
-                    player.GetControlScheme(),
-                    1,
-                    player.GetDevice());
+                var newPlayer = CreatePlayer(players[p], p);
                 newPlayer.transform.position = spawnPoints[p];
-                newPlayer.GetComponentInChildren<Renderer>().material.color = PlayerManager.GetPlayerColour(p);
-                _players.Add(newPlayer.gameObject);
             }
+        }
+
+        protected PlayerInput CreatePlayer(PlayerData data, int index)
+        {
+            var newPlayer = PlayerInput.Instantiate(
+                playerPrefab,
+                -1,
+                data.GetControlScheme(),
+                1,
+                data.GetDevice());
+            newPlayer.GetComponentInChildren<Renderer>().material.color = PlayerManager.GetPlayerColour(index);
+            _players.Add(newPlayer.gameObject);
+            return newPlayer;
         }
 
         public void RemovePlayer(GameObject player)
