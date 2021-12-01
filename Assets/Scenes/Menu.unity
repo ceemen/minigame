@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -221,6 +221,10 @@ PrefabInstance:
     - target: {fileID: 2913367432902255228, guid: 9c636108beddc1840bb1916edd79c68a, type: 3}
       propertyPath: m_Name
       value: Lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 2913367432902255230, guid: 9c636108beddc1840bb1916edd79c68a, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c636108beddc1840bb1916edd79c68a, type: 3}
@@ -630,7 +634,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh23700
+  m_Name: pb_Mesh26348
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1118,7 +1122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47e3b1b2bdd542eb93a713252f94ac64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: Scenes/CoOpTest
+  scene: Scenes/FloorDrop
   mainMenu: {fileID: 917653338}
   startButton: {fileID: 588472613}
   panel: {fileID: 1528707495}
