@@ -9,7 +9,6 @@ namespace GameOver
         [SerializeField] private GameObject pillarPrefab;
         [SerializeField] private Vector3 pillarOffset;
         [SerializeField] private int danceCount;
-        private readonly List<GameObject> _pillars = new List<GameObject>();
         private static readonly int Dance = Animator.StringToHash("Dance");
 
         protected override void SpawnPlayers(PlayerData[] players)
@@ -22,13 +21,10 @@ namespace GameOver
                 // Set the animation
                 var dance = 0;
                 if (PlayerManager.GetInstance().GetWinner() == p)
-                {
-                    dance = Random.Range(1, dance);
-                }
+                    dance = Random.Range(1, danceCount + 1);
                 newPlayer.GetComponentInChildren<Animator>().SetInteger(Dance, dance);
                 var pillarPosition = spawnPoint + pillarOffset;
                 var newPillar = Instantiate(pillarPrefab, pillarPosition, Quaternion.identity);
-                _pillars.Add(newPillar);
                 spawnPoint.x += 2;
             }
         }
