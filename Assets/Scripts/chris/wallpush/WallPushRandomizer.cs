@@ -61,15 +61,19 @@ public class WallPushRandomizer : MonoBehaviour
 
     void SelectWallToPush(int index)
     {
+
         if (wallRocks[index].GetComponent<RockWallObj>().GetOutBool())
         {
             wallRocks[index].GetComponent<Animator>().SetTrigger("Pull");
             wallRocks[index].GetComponent<RockWallObj>().SetOutBool(false);
+            print("anim speed is: " + wallRocks[index].GetComponent<Animator>().speed);
         }
         else if(!wallRocks[index].GetComponent<RockWallObj>().GetOutBool())
         {
+      
             wallRocks[index].GetComponent<Animator>().SetTrigger("Push");
             wallRocks[index].GetComponent<RockWallObj>().SetOutBool(true);
+            print("anim speed is: " + wallRocks[index].GetComponent<Animator>().speed);
         }
                    
     }
@@ -77,7 +81,7 @@ public class WallPushRandomizer : MonoBehaviour
 
     private void DifficultySwitch()
     {
-        print("GEtting Faster");
+        print("Getting Faster");
         currentGameDifficulty++;
         print(currentGameDifficulty);
     }
