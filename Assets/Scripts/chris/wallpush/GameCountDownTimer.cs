@@ -7,48 +7,72 @@ public class GameCountDownTimer : MonoBehaviour
 {
 
     public Text timerText;
-    private float gameTime = 120.0f;
+    private float gameTime;
+    private float initialgameCountdownTime;
     private float eventInterval = 0.0f;
 
     public delegate void TimerDelegate();
-    public static event TimerDelegate timerInvterval;
-    public static event TimerDelegate timeEndEvent;
+    public static event TimerDelegate timerInvtervalEvent;
+    public static event TimerDelegate gameTimeEndEvent;
+    public static event TimerDelegate gameTimeStartEvent;
 
-    // I want an event here
+    private WallPushRandomizer randomizerManager;
+
+    private void Awake()
+    {
+        randomizerManager = GetComponent<WallPushRandomizer>();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        timerText.text = gameTime.ToString();   
+        timerText.text = initialgameCountdownTime.ToString();
+        gameTime = 120.0f;
+        initialgameCountdownTime = 5.0f;       
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        if (gameTime > 0)
+        if (randomizerManager.GetGameState() == WallPushRandomizer.GameState.gameNotStarted)
         {
-            eventInterval += Time.deltaTime;
-            gameTime -= Time.deltaTime;
-            TimeDisplayConversion(gameTime);
-            if (eventInterval >=20.0f)
+            initialgameCountdownTime -= Time.deltaTime;
+            TimeDisplayConversion(initialgameCountdownTime);
+            if (initialgameCountdownTime <= 0.0f)
             {
-                eventInterval = 0.0f;
-                if (timerInvterval != null)
+                gameTimeStartEvent();
+            }       
+        }
+
+        if (randomizerManager.GetGameState() == WallPushRandomizer.GameState.gameStarted)
+        {
+            timerText.text = gameTime.ToString();
+            if (gameTime > 0)
+            {
+                eventInterval += Time.deltaTime;
+                gameTime -= Time.deltaTime;
+                TimeDisplayConversion(gameTime);
+                if (eventInterval >=20.0f)
                 {
-                    timerInvterval();
+                    eventInterval = 0.0f;
+                    if (timerInvtervalEvent != null)
+                    {
+                        timerInvtervalEvent();
+                    }
+                }
+            }
+            if (gameTime <= 0)
+            {
+                gameTime = 0;
+                TimeDisplayConversion(gameTime);
+                if (gameTimeEndEvent != null)
+                {
+                    gameTimeEndEvent();
                 }
             }
         }
-        if (gameTime <= 0)
-        {
-            gameTime = 0;
-            TimeDisplayConversion(gameTime);
-            if (timeEndEvent != null)
-            {
-                timeEndEvent();
-            }
-        }
+
+
 
     }
 

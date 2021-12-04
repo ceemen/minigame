@@ -13,15 +13,14 @@ public class WallPushRandomizer : MonoBehaviour
 
     };
 
-
     private GameCountDownTimer GameCountDownTimerComponent;
     public GameObject[] wallRocks;
     private float gameStartDelay = 5.0f;
     private float delay = 2.0f;
     private int currentGameTime;
     private int currentGameDifficulty = 0;
+    private GameState gamestate;
 
-    //I want to subscribe to the event in GameCOuntDOwn
 
     // Start is called before the first frame update
     void Awake()
@@ -31,31 +30,53 @@ public class WallPushRandomizer : MonoBehaviour
     }
     private void OnEnable()
     {
-        GameCountDownTimer.timerInvterval += DifficultySwitch;
+        GameCountDownTimer.timerInvtervalEvent += DifficultySwitch;
+        GameCountDownTimer.gameTimeStartEvent += ChangeGameState;
+        GameCountDownTimer.gameTimeEndEvent += ChangeGameState;
 
     }  
     private void OnDisable()
     {
-        GameCountDownTimer.timerInvterval -= DifficultySwitch;
+        GameCountDownTimer.timerInvtervalEvent -= DifficultySwitch;
+        GameCountDownTimer.gameTimeStartEvent -= ChangeGameState;
+        GameCountDownTimer.gameTimeEndEvent -= ChangeGameState;
 
+    }
+
+    private void Start()
+    {
+        gamestate = GameState.gameNotStarted;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (gamestate == GameState.gameStarted)
+        {
+
             delay -= Time.deltaTime;
 
             if (delay <= 0.0f)
             {
                 int numToPush = Random.Range(0, wallRocks.Length);
 
+                SetDelay();
+
                 SelectWallToPush(numToPush);
 
-                SetDelay();
                 //print(delay);
             }
 
-        print("curr game diff " + currentGameDifficulty);
+            print("curr game diff " + currentGameDifficulty);
+
+        }
+        if (gamestate == GameState.gameFinished)
+        {
+            print("Game has Finished");
+        }
+
+        print(gamestate.ToString());
 
     }
 
@@ -64,16 +85,17 @@ public class WallPushRandomizer : MonoBehaviour
 
         if (wallRocks[index].GetComponent<RockWallObj>().GetOutBool())
         {
+            wallRocks[index].GetComponent<Animator>().speed = 1 / delay;
             wallRocks[index].GetComponent<Animator>().SetTrigger("Pull");
             wallRocks[index].GetComponent<RockWallObj>().SetOutBool(false);
-            print("anim speed is: " + wallRocks[index].GetComponent<Animator>().speed);
+            //print("anim speed is: " + wallRocks[index].GetComponent<Animator>().speed);
         }
         else if(!wallRocks[index].GetComponent<RockWallObj>().GetOutBool())
         {
-      
+            wallRocks[index].GetComponent<Animator>().speed = 1 / delay;
             wallRocks[index].GetComponent<Animator>().SetTrigger("Push");
             wallRocks[index].GetComponent<RockWallObj>().SetOutBool(true);
-            print("anim speed is: " + wallRocks[index].GetComponent<Animator>().speed);
+            //print("anim speed is: " + wallRocks[index].GetComponent<Animator>().speed);
         }
                    
     }
@@ -83,7 +105,7 @@ public class WallPushRandomizer : MonoBehaviour
     {
         print("Getting Faster");
         currentGameDifficulty++;
-        print(currentGameDifficulty);
+        //print(currentGameDifficulty);
     }
 
     private void SetDelay()
@@ -112,5 +134,27 @@ public class WallPushRandomizer : MonoBehaviour
 
     }
 
-    
+    public GameState GetGameState()
+    {
+        return gamestate;
+    }
+    public void ChangeGameState()
+    {
+        switch (gamestate)
+        {
+            case GameState.gameNotStarted:
+                gamestate = GameState.gameStarted;
+                break;
+            case GameState.gameStarted:
+                gamestate = GameState.gameFinished;
+                break;
+            case GameState.gameFinished:
+                gamestate = GameState.gameFinished;
+                break;
+            default:
+                break;
+        }
+    }
+
+
 }
