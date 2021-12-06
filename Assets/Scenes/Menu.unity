@@ -1118,7 +1118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47e3b1b2bdd542eb93a713252f94ac64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: Scenes/CoOpTest
+  scene: Scenes/LavaTower
   mainMenu: {fileID: 917653338}
   startButton: {fileID: 588472613}
   panel: {fileID: 1528707495}
