@@ -15,14 +15,17 @@ namespace LavaTower
         private void OnTriggerEnter(Collider other)
         {
             if (!other.gameObject.CompareTag("Platform"))
+            {
                 return;
+            }
+
             if (transform.position.y < other.transform.position.y)
-                return;
+            {
+                return; 
+            }
+            
             var velocity = _rb.velocity;
-            velocity = new Vector3(
-                velocity.x,
-                jumpHeight,
-                velocity.z);
+            velocity = new Vector3(velocity.x, jumpHeight, velocity.z);
             _rb.velocity = velocity;
         }
     }

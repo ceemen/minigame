@@ -8,7 +8,7 @@ namespace LavaTower
 {
     public class PlayerDeath : MonoBehaviour
     {
-        public TextMeshProUGUI PlayerDeadText;
+        public TextMeshProUGUI playerDeadText;
         
         private List<GameObject> players;
 
@@ -27,21 +27,10 @@ namespace LavaTower
                 Destroy(other.gameObject);
                 if (players.Count == 0)
                 {
-                    PlayerDeadText.enabled = true;
+                    playerDeadText.enabled = true;
                     StartCoroutine(LevelLoad());
                 }
             }
-
-            //foreach (GameObject g in players.ToArray())
-            //{
-            //    Destroy(g);
-            //}
-            
-            //for (int i = 0; i < players.Length; i++)
-            //{
-            //    Destroy(players[i]);
-            //}
-            //print(players.Count);
         }
         
         IEnumerator LevelLoad()
