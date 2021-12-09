@@ -13,19 +13,17 @@ public class WallPushRandomizer : MonoBehaviour
 
     };
 
-    private GameCountDownTimer GameCountDownTimerComponent;
+
     public GameObject[] wallRocks;
-    private float gameStartDelay = 5.0f;
     private float delay = 2.0f;
-    private int currentGameTime;
     private int currentGameDifficulty = 0;
+    private bool inWallSequence = false;
     private GameState gamestate;
 
 
     // Start is called before the first frame update
     void Awake()
     {
-       GameCountDownTimerComponent = GetComponent<GameCountDownTimer>();
        
     }
     private void OnEnable()
@@ -33,6 +31,7 @@ public class WallPushRandomizer : MonoBehaviour
         GameCountDownTimer.timerInvtervalEvent += DifficultySwitch;
         GameCountDownTimer.gameTimeStartEvent += ChangeGameState;
         GameCountDownTimer.gameTimeEndEvent += ChangeGameState;
+        GameCountDownTimer.gameTimeSequenceEvent += ResetWalls;
 
     }  
     private void OnDisable()
@@ -40,6 +39,7 @@ public class WallPushRandomizer : MonoBehaviour
         GameCountDownTimer.timerInvtervalEvent -= DifficultySwitch;
         GameCountDownTimer.gameTimeStartEvent -= ChangeGameState;
         GameCountDownTimer.gameTimeEndEvent -= ChangeGameState;
+        GameCountDownTimer.gameTimeSequenceEvent -= ResetWalls;
 
     }
 
@@ -49,13 +49,14 @@ public class WallPushRandomizer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
 
         if (gamestate == GameState.gameStarted)
         {
 
             delay -= Time.deltaTime;
+
 
             if (delay <= 0.0f)
             {
@@ -67,8 +68,8 @@ public class WallPushRandomizer : MonoBehaviour
 
                 //print(delay);
             }
-
-            print("curr game diff " + currentGameDifficulty);
+                       
+            //print("curr game diff " + currentGameDifficulty);
 
         }
         if (gamestate == GameState.gameFinished)
@@ -76,11 +77,11 @@ public class WallPushRandomizer : MonoBehaviour
             print("Game has Finished");
         }
 
-        print(gamestate.ToString());
+        //print(gamestate.ToString());
 
     }
 
-    void SelectWallToPush(int index)
+    private void SelectWallToPush(int index)
     {
 
         if (wallRocks[index].GetComponent<RockWallObj>().GetOutBool())
@@ -138,7 +139,7 @@ public class WallPushRandomizer : MonoBehaviour
     {
         return gamestate;
     }
-    public void ChangeGameState()
+    private void ChangeGameState()
     {
         switch (gamestate)
         {
@@ -156,5 +157,22 @@ public class WallPushRandomizer : MonoBehaviour
         }
     }
 
+    private void ResetWalls()
+    {
+        print("event called");
+        inWallSequence = true;
+        for (int i = 6; i < wallRocks.Length; i++)
+        {
+            SelectWallToPush(i);
+        }
+    }
+
+    private void StartWallSequence()
+    {
+        for (int i = 0; i < wallRocks.Length; i++)
+        {
+            SelectWallToPush(i);
+        }
+    }
 
 }

@@ -10,11 +10,13 @@ public class GameCountDownTimer : MonoBehaviour
     private float gameTime;
     private float initialgameCountdownTime;
     private float eventInterval = 0.0f;
+    private float sequenceTime;
 
     public delegate void TimerDelegate();
     public static event TimerDelegate timerInvtervalEvent;
     public static event TimerDelegate gameTimeEndEvent;
     public static event TimerDelegate gameTimeStartEvent;
+    public static event TimerDelegate gameTimeSequenceEvent;
 
     private WallPushRandomizer randomizerManager;
 
@@ -24,15 +26,16 @@ public class GameCountDownTimer : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         timerText.text = initialgameCountdownTime.ToString();
         gameTime = 120.0f;
-        initialgameCountdownTime = 5.0f;       
+        initialgameCountdownTime = 5.0f; 
+        sequenceTime = //return Math.Abs(value1 - value2) <= acceptableDifference; 
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (randomizerManager.GetGameState() == WallPushRandomizer.GameState.gameNotStarted)
         {
@@ -52,6 +55,12 @@ public class GameCountDownTimer : MonoBehaviour
                 eventInterval += Time.deltaTime;
                 gameTime -= Time.deltaTime;
                 TimeDisplayConversion(gameTime);
+
+                if ()
+                {
+                    gameTimeSequenceEvent();
+                }
+
                 if (eventInterval >=20.0f)
                 {
                     eventInterval = 0.0f;
@@ -61,6 +70,8 @@ public class GameCountDownTimer : MonoBehaviour
                     }
                 }
             }
+           
+
             if (gameTime <= 0)
             {
                 gameTime = 0;
@@ -77,7 +88,7 @@ public class GameCountDownTimer : MonoBehaviour
     }
 
 
-    void TimeDisplayConversion(float timeToConvert)
+    private void TimeDisplayConversion(float timeToConvert)
     {
         float minutes = Mathf.FloorToInt(timeToConvert / 60);
         float seconds = Mathf.FloorToInt(timeToConvert %60);
@@ -86,4 +97,6 @@ public class GameCountDownTimer : MonoBehaviour
 
     }
 
+
+    
 }
