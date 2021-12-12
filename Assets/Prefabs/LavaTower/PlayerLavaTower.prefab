@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &4126977225693873072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6231086956580591523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff96bcb1bb9e4026a8085e226e8887c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-6421958164556187161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27,18 +39,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpHeight: 12
---- !u!114 &4126977225693873072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6231086956580591523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff96bcb1bb9e4026a8085e226e8887c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  superJumpPlatform: {fileID: 7988318059641522848, guid: 43f7c8b81fbd5204eac74593baa49173, type: 3}
 --- !u!1001 &4383919706327516056
 PrefabInstance:
   m_ObjectHideFlags: 0

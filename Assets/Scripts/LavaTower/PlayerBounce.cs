@@ -14,7 +14,8 @@ namespace LavaTower
 
         private void OnTriggerEnter(Collider other)
         {
-            if (!other.gameObject.CompareTag("Platform"))
+
+            if (!other.gameObject.CompareTag("Platform") && !other.gameObject.CompareTag("SuperJumpPlatform"))
             {
                 return;
             }
@@ -27,6 +28,13 @@ namespace LavaTower
             var velocity = _rb.velocity;
             velocity = new Vector3(velocity.x, jumpHeight, velocity.z);
             _rb.velocity = velocity;
+
+            if (other.gameObject.CompareTag("SuperJumpPlatform"))
+            {
+                var velocity2 = _rb.velocity;
+                velocity2 = new Vector3(velocity2.x, jumpHeight + 4, velocity2.z);
+                _rb.velocity = velocity2;
+            }
         }
     }
 }

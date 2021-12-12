@@ -633,6 +633,7 @@ MonoBehaviour:
   - {fileID: 7425065389396386210, guid: a33ec508d495b1b47907582e63d58ba9, type: 3}
   - {fileID: 3411413916354682703, guid: 231ccc7f99331fe4e9593750339702a7, type: 3}
   - {fileID: 4969140430852348078, guid: 98ec560849ec688438bd1647c634a458, type: 3}
+  - {fileID: 7988318059641522848, guid: 43f7c8b81fbd5204eac74593baa49173, type: 3}
 --- !u!1 &1043235549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1261,7 +1262,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32472
+  m_Name: pb_Mesh-2878
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
