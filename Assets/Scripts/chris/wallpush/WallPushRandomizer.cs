@@ -18,6 +18,7 @@ public class WallPushRandomizer : MonoBehaviour
     private float delay = 2.0f;
     private int currentGameDifficulty = 0;
     private bool inWallSequence = false;
+    private int indexForSequence = 0;
     private GameState gamestate;
 
 
@@ -31,7 +32,7 @@ public class WallPushRandomizer : MonoBehaviour
         GameCountDownTimer.timerInvtervalEvent += DifficultySwitch;
         GameCountDownTimer.gameTimeStartEvent += ChangeGameState;
         GameCountDownTimer.gameTimeEndEvent += ChangeGameState;
-        GameCountDownTimer.gameTimeSequenceEvent += ResetWalls;
+        GameCountDownTimer.gameTimeSequenceEvent += SetWallSequenceBool;
 
     }  
     private void OnDisable()
@@ -39,7 +40,7 @@ public class WallPushRandomizer : MonoBehaviour
         GameCountDownTimer.timerInvtervalEvent -= DifficultySwitch;
         GameCountDownTimer.gameTimeStartEvent -= ChangeGameState;
         GameCountDownTimer.gameTimeEndEvent -= ChangeGameState;
-        GameCountDownTimer.gameTimeSequenceEvent -= ResetWalls;
+        GameCountDownTimer.gameTimeSequenceEvent -= SetWallSequenceBool;
 
     }
 
@@ -57,16 +58,42 @@ public class WallPushRandomizer : MonoBehaviour
 
             delay -= Time.deltaTime;
 
-
-            if (delay <= 0.0f)
+            if (!inWallSequence)
             {
-                int numToPush = Random.Range(0, wallRocks.Length);
 
-                SetDelay();
+                if (delay <= 0.0f)
+                {
+                    int numToPush = Random.Range(0, wallRocks.Length);
 
-                SelectWallToPush(numToPush);
+                    SetDelay();
 
-                //print(delay);
+                    SelectWallToPush(numToPush);
+
+                    //print(delay);
+                }
+            }
+
+            if (inWallSequence)
+            {
+
+                if (delay <= 0.0f)
+                {
+
+                    print(indexForSequence);
+                    SetDelay();
+                    if (indexForSequence < wallRocks.Length && indexForSequence != wallRocks.Length-1)
+                    {
+                        SelectWallToPush(indexForSequence);
+                        indexForSequence+=2;
+                    }
+                    else if(indexForSequence == wallRocks.Length)
+                    {
+                        indexForSequence = 1;
+                    }else if(indexForSequence == wallRocks.Length - 1){
+
+                        inWallSequence = false;
+                    }
+                }
             }
                        
             //print("curr game diff " + currentGameDifficulty);
@@ -86,16 +113,12 @@ public class WallPushRandomizer : MonoBehaviour
 
         if (wallRocks[index].GetComponent<RockWallObj>().GetOutBool())
         {
-            wallRocks[index].GetComponent<Animator>().speed = 1 / delay;
-            wallRocks[index].GetComponent<Animator>().SetTrigger("Pull");
-            wallRocks[index].GetComponent<RockWallObj>().SetOutBool(false);
+            PushIn(index);
             //print("anim speed is: " + wallRocks[index].GetComponent<Animator>().speed);
         }
         else if(!wallRocks[index].GetComponent<RockWallObj>().GetOutBool())
         {
-            wallRocks[index].GetComponent<Animator>().speed = 1 / delay;
-            wallRocks[index].GetComponent<Animator>().SetTrigger("Push");
-            wallRocks[index].GetComponent<RockWallObj>().SetOutBool(true);
+            PushOut(index);
             //print("anim speed is: " + wallRocks[index].GetComponent<Animator>().speed);
         }
                    
@@ -114,14 +137,14 @@ public class WallPushRandomizer : MonoBehaviour
 
         if (currentGameDifficulty == 0)
         {
-            delay = 2.0f;
+            delay = 1.8f;
         }
         else if (currentGameDifficulty == 1)
         {
-           delay = 1.6f;
+           delay = 1.4f;
         } else if (currentGameDifficulty == 2)
         {
-            delay = 1.2f;
+            delay = 1.0f;
         } else if (currentGameDifficulty == 3)
         {
             delay = 0.8f;
@@ -157,22 +180,34 @@ public class WallPushRandomizer : MonoBehaviour
         }
     }
 
-    private void ResetWalls()
+    private void SetWallSequenceBool()
     {
-        print("event called");
-        inWallSequence = true;
-        for (int i = 6; i < wallRocks.Length; i++)
+        if (!inWallSequence)
         {
-            SelectWallToPush(i);
+            print("enabled called");
+            inWallSequence = true;
+
         }
+        else if(inWallSequence)
+        {
+            print("disabled event");
+            inWallSequence = false;
+        }
+
     }
 
-    private void StartWallSequence()
+    private void PushOut(int index)
     {
-        for (int i = 0; i < wallRocks.Length; i++)
-        {
-            SelectWallToPush(i);
-        }
+        wallRocks[index].GetComponent<Animator>().speed = 1 / delay;
+        wallRocks[index].GetComponent<Animator>().SetTrigger("Push");
+        wallRocks[index].GetComponent<RockWallObj>().SetOutBool(true);
+    }
+
+    private void PushIn(int index)
+    {
+        wallRocks[index].GetComponent<Animator>().speed = 1 / delay;
+        wallRocks[index].GetComponent<Animator>().SetTrigger("Pull");
+        wallRocks[index].GetComponent<RockWallObj>().SetOutBool(false);
     }
 
 }

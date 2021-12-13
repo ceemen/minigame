@@ -7,10 +7,11 @@ public class GameCountDownTimer : MonoBehaviour
 {
 
     public Text timerText;
-    private float gameTime;
-    private float initialgameCountdownTime;
+    private float gameTime = 120.0f;
+    private float initiateSequenceTime = 0.0f;
+    private float initialgameCountdownTime = 5.0f;
     private float eventInterval = 0.0f;
-    private float sequenceTime;
+    private bool lockSequenceTimer = false;
 
     public delegate void TimerDelegate();
     public static event TimerDelegate timerInvtervalEvent;
@@ -28,10 +29,7 @@ public class GameCountDownTimer : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        timerText.text = initialgameCountdownTime.ToString();
-        gameTime = 120.0f;
-        initialgameCountdownTime = 5.0f; 
-        sequenceTime = //return Math.Abs(value1 - value2) <= acceptableDifference; 
+        timerText.text = initialgameCountdownTime.ToString();       
     }
 
     // Update is called once per frame
@@ -54,10 +52,18 @@ public class GameCountDownTimer : MonoBehaviour
             {
                 eventInterval += Time.deltaTime;
                 gameTime -= Time.deltaTime;
+
+                if (!lockSequenceTimer) 
+                {
+                    initiateSequenceTime += Time.deltaTime;
+                }
+                
                 TimeDisplayConversion(gameTime);
 
-                if ()
+                if (initiateSequenceTime >= 50.0f)
                 {
+                    lockSequenceTimer = true;
+                    initiateSequenceTime = 0;
                     gameTimeSequenceEvent();
                 }
 
@@ -69,8 +75,11 @@ public class GameCountDownTimer : MonoBehaviour
                         timerInvtervalEvent();
                     }
                 }
+
+
             }
-           
+
+
 
             if (gameTime <= 0)
             {
