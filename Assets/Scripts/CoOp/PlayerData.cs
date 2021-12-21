@@ -5,13 +5,13 @@ namespace CoOp
     public struct PlayerData
     {
         private readonly string _controlScheme;
-        private readonly InputDevice _device;
+        private readonly InputDevice[] _devices;
         private int _score;
 
-        public PlayerData(string controlScheme, InputDevice device)
+        public PlayerData(string controlScheme, InputDevice[] devices)
         {
             _controlScheme = controlScheme;
-            _device = device;
+            _devices = devices;
             _score = 0;
         }
 
@@ -20,9 +20,9 @@ namespace CoOp
             return _controlScheme;
         }
 
-        public InputDevice GetDevice()
+        public InputDevice[] GetDevices()
         {
-            return _device;
+            return _devices;
         }
 
         public int GetScore()
@@ -35,14 +35,9 @@ namespace CoOp
             _score += amount;
         }
 
-        public static bool operator ==(PlayerData x, PlayerData y)
+        public bool Equals(PlayerData other)
         {
-            return x._controlScheme == y._controlScheme && x._device == y._device;
-        }
-
-        public static bool operator !=(PlayerData x, PlayerData y)
-        {
-            return !(x == y);
+            return _controlScheme == other._controlScheme && _devices == other._devices;
         }
     }
 }
