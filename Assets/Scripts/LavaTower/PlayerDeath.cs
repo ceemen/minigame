@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using CoOp;
 
 namespace LavaTower
 {
@@ -12,6 +13,8 @@ namespace LavaTower
         
         private List<GameObject> players;
 
+        public PlayerSpawner spawner;
+        
         private void Start()
         {
             players = new List<GameObject>();
@@ -24,6 +27,7 @@ namespace LavaTower
             if (players.Contains(other.gameObject))
             {
                 players.Remove(other.gameObject);
+                spawner.RemovePlayer(other.gameObject);
                 Destroy(other.gameObject);
                 if (players.Count == 0)
                 {

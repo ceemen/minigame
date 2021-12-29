@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using CoOp;
 
 namespace LavaTower
 {
@@ -7,6 +8,8 @@ namespace LavaTower
     {
         private readonly List<Transform> players = new List<Transform>();
 
+        public PlayerSpawner spawner;
+        
         private void Start()
         {
             var controllers = FindObjectsOfType<PlayerControllerLavaTower>();
@@ -26,6 +29,7 @@ namespace LavaTower
                 if (playerHeight > position.y)
                 {
                     position.y = playerHeight;
+                    spawner.RemovePlayer(player.gameObject);
                 }
             }
 

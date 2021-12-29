@@ -181,6 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDeadText: {fileID: 1131315933}
+  spawner: {fileID: 0}
 --- !u!1 &162042008
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,6 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDeadText: {fileID: 1131315933}
+  spawner: {fileID: 0}
 --- !u!1 &290217120
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,6 +299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerDeadText: {fileID: 1131315933}
+  spawner: {fileID: 0}
 --- !u!1 &355695067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,13 +1259,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2de9400638ec040ad44f15f4e774cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawner: {fileID: 885052926}
 --- !u!43 &2070845066
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2878
+  m_Name: pb_Mesh-2852
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
