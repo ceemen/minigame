@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Platform
   - SuperJumpPlatform
+  - Cube
+  - GroundLevelRock
+  - HeadLevelRock
+  - HighLevelRock
   layers:
   - Default
   - TransparentFX

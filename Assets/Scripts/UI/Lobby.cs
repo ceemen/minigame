@@ -19,9 +19,6 @@ namespace UI
         public void StartGame()
         {
             inputManager.enabled = false;
-
-            SceneManager.LoadScene("Scenes/LavaTower");
-
             SceneManager.LoadScene(scene);
         }
 
