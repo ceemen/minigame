@@ -2,14 +2,14 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
 namespace UI
 {
     public class Lobby : Menu
     {
-        [SerializeField] private string scene;
+        [SerializeField] private Animator transition; 
         [SerializeField] private Canvas mainMenu;
         [SerializeField] private Button startButton;
         [SerializeField] private RectTransform panel;
@@ -20,9 +20,7 @@ namespace UI
         {
             inputManager.enabled = false;
 
-            SceneManager.LoadScene("Scenes/LavaTower");
-
-            SceneManager.LoadScene(scene);
+            StartCoroutine(PlayAnimation());
         }
 
         public void Back()
@@ -51,6 +49,13 @@ namespace UI
         private int GetChildIndex(int playerIndex)
         {
             return playerIndex + 1;
+        }
+        
+        IEnumerator PlayAnimation()
+        {
+            transition.SetTrigger("Start");
+            yield return new WaitForSeconds(2.0f);
+            SceneTransition.LoadScene(3);
         }
     }
 }
