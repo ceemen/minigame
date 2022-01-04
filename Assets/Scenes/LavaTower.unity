@@ -180,8 +180,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908f74466ece2c04bad38fe55e36b037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transition: {fileID: 2139796479}
   playerDeadText: {fileID: 1131315933}
-  spawner: {fileID: 0}
+  spawner: {fileID: 885052926}
 --- !u!1 &162042008
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,8 +240,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908f74466ece2c04bad38fe55e36b037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transition: {fileID: 2139796479}
   playerDeadText: {fileID: 1131315933}
-  spawner: {fileID: 0}
+  spawner: {fileID: 885052926}
 --- !u!1 &290217120
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,8 +300,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 908f74466ece2c04bad38fe55e36b037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transition: {fileID: 2139796479}
   playerDeadText: {fileID: 1131315933}
-  spawner: {fileID: 0}
+  spawner: {fileID: 885052926}
 --- !u!1 &355695067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1043,6 +1046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 821539a4624b1334fb93f8c1baa91166, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transition: {fileID: 2139796479}
   timeRemaining: 10
   timerIsRunning: 0
   timeText: {fileID: 1309063127}
@@ -1354,7 +1358,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2852
+  m_Name: pb_Mesh-4902
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

@@ -2,19 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using CoOp;
 
 namespace LavaTower
 {
     public class PlayerDeath : MonoBehaviour
     {
-        public TextMeshProUGUI playerDeadText;
-        
+        [SerializeField] private Animator transition;
+        [SerializeField] private TextMeshProUGUI playerDeadText;
+        [SerializeField] private PlayerSpawner spawner;
         private List<GameObject> players;
 
-        public PlayerSpawner spawner;
-        
         private void Start()
         {
             players = new List<GameObject>();
@@ -39,8 +37,9 @@ namespace LavaTower
         
         IEnumerator LevelLoad()
         {
+            transition.SetTrigger("Start");
             yield return new WaitForSeconds(2.0f);
-            SceneManager.LoadScene("Scenes/Menu");
+            SceneTransition.LoadScene(0);
         }
         
     }
