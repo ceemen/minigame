@@ -8,6 +8,7 @@ namespace Menu
         private static readonly int Idle = Animator.StringToHash("Idle");
         private static readonly int Run = Animator.StringToHash("Run");
         private static readonly int Jump = Animator.StringToHash("Jump");
+        private static readonly int Punch = Animator.StringToHash("Punch");
         
         private Animator _animator;
         

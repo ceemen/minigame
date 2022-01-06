@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FloorDrop.unity
     guid: 0194f29d8fe1596429138c9ce5108b16
+  - enabled: 1
+    path: Assets/Scenes/Frogger.unity
+    guid: cd7dd5c0121a389418a739806466ecf4
   m_configObjects: {}
