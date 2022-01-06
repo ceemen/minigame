@@ -5,9 +5,8 @@ namespace Menu
 {
     public class PlayerController : MonoBehaviour
     {
-        private const float RunSpeed = 3;
-        private const float JumpHeight = 5;
-
+        [SerializeField] private float runSpeed = 3;
+        [SerializeField] private float jumpHeight = 5;
         [SerializeField] private PlayerAnimation playerAnimation;
 
         private Rigidbody _rb;
@@ -34,13 +33,13 @@ namespace Menu
             var grounded = IsGrounded();
             var velocity = _rb.velocity;
             // Horizontal movement.
-            velocity.x = _runInput.x * RunSpeed;
-            velocity.z = _runInput.y * RunSpeed;
+            velocity.x = _runInput.x * runSpeed;
+            velocity.z = _runInput.y * runSpeed;
             // Jump.
             if (_actionHeld && grounded)
             {
                 grounded = false;
-                velocity.y = JumpHeight;
+                velocity.y = jumpHeight;
             }
             // Apply velocity.
             _rb.velocity = velocity;
