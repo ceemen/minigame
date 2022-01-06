@@ -1,4 +1,3 @@
-using System.Collections;
 using TMPro;
 using UnityEngine;
 using CoOp;
@@ -7,7 +6,6 @@ namespace LavaTower
 {
     public class Timer : MonoBehaviour
     {
-        [SerializeField] private Animator transition;
         [SerializeField] private float timeRemaining = 10;
         [SerializeField] private bool timerIsRunning = false;
         [SerializeField] private TextMeshProUGUI timeText;
@@ -30,18 +28,11 @@ namespace LavaTower
                 else
                 {
                     timeRunoutText.enabled = true;
-                    StartCoroutine(LevelLoad());
+                    SceneTransition.LoadScene(0);
                     timeRemaining = 0;
                     timerIsRunning = false;
                 }
             }
-        }
-
-        IEnumerator LevelLoad()
-        {
-            transition.SetTrigger("Start");
-            yield return new WaitForSeconds(2.0f);
-            SceneTransition.LoadScene(0);
         }
         
         private void DisplayTime(float timeToDisplay)

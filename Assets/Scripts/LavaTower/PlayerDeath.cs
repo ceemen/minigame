@@ -8,7 +8,6 @@ namespace LavaTower
 {
     public class PlayerDeath : MonoBehaviour
     {
-        [SerializeField] private Animator transition;
         [SerializeField] private TextMeshProUGUI playerDeadText;
         [SerializeField] private PlayerSpawner spawner;
         private List<GameObject> players;
@@ -30,17 +29,9 @@ namespace LavaTower
                 if (players.Count == 0)
                 {
                     playerDeadText.enabled = true;
-                    StartCoroutine(LevelLoad());
+                    SceneTransition.LoadScene(0);
                 }
             }
         }
-        
-        IEnumerator LevelLoad()
-        {
-            transition.SetTrigger("Start");
-            yield return new WaitForSeconds(2.0f);
-            SceneTransition.LoadScene(0);
-        }
-        
     }
 }

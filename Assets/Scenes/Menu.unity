@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1118,7 +1118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47e3b1b2bdd542eb93a713252f94ac64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 1280816427}
+  transition: {fileID: 0}
   mainMenu: {fileID: 917653338}
   startButton: {fileID: 588472613}
   panel: {fileID: 1528707495}
@@ -2248,11 +2248,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1280816427 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4959100562909689639, guid: 22ef3d2a7e02ba348845912013d89c96, type: 3}
-  m_PrefabInstance: {fileID: 4959100564190020108}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1528707494
 GameObject:
   m_ObjectHideFlags: 0
@@ -2638,7 +2633,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4959100562909689638, guid: 22ef3d2a7e02ba348845912013d89c96, type: 3}
       propertyPath: m_Name
-      value: Crossfade
+      value: Fade
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22ef3d2a7e02ba348845912013d89c96, type: 3}

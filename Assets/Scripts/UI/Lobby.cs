@@ -3,7 +3,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
-using System.Collections;
 
 namespace UI
 {
@@ -19,8 +18,7 @@ namespace UI
         public void StartGame()
         {
             inputManager.enabled = false;
-
-            StartCoroutine(PlayAnimation());
+            SceneTransition.LoadScene(3);
         }
 
         public void Back()
@@ -49,13 +47,6 @@ namespace UI
         private int GetChildIndex(int playerIndex)
         {
             return playerIndex + 1;
-        }
-        
-        IEnumerator PlayAnimation()
-        {
-            transition.SetTrigger("Start");
-            yield return new WaitForSeconds(2.0f);
-            SceneTransition.LoadScene(3);
         }
     }
 }
