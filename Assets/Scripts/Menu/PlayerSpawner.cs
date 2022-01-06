@@ -20,7 +20,7 @@ namespace Menu
         public void OnPlayerJoined(PlayerInput player)
         {
             // Skip if player has already been added.
-            if (!PlayerManager.GetInstance().AddPlayer(player))
+            if (!PlayerManager.AddPlayer(player))
                 return;
             // Set the position and colour of a new player.
             var playerIndex = player.playerIndex % 4;
