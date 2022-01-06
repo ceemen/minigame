@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class LevelGen : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+
+
+    public int numPlayers = 1;
+
+    [SerializeField] private int gameLength = 300;
+    [SerializeField] private GameObject[] floatPlatforms;
+    [SerializeField] private GameObject[] raisedPlatforms;
+
+
     void Start()
     {
-        
+
+        for (int i = 0; i < gameLength; i++)
+        {
+
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
