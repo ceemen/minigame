@@ -31,10 +31,10 @@ public class BoulderRotate : MonoBehaviour
     {
         if (col.gameObject.tag == "Player")
         {
-            for(int i = 0; i < players.Length; i++)
+            for(int i = 0; i < controllers.Length; i++)
             {
                 controllers[i].enabled = false;
-                collisions[i].enabled = false;
+                //collisions[i].enabled = false;
             }
         }
     }
