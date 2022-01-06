@@ -11,8 +11,8 @@ public class CutsceneScript : MonoBehaviour
     [SerializeField] private GameObject camera3;
     [SerializeField] private GameObject camera4;
 
-	private PlayerControllerFrogger[] players;// = GameObject.FindGameObjectsWithTag("Player");
-	
+	private PlayerControllerFrogger[] players;
+
     // Start is called before the first frame update
     void Start()
     {
