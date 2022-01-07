@@ -11,14 +11,12 @@ public class BoulderRotate : MonoBehaviour
     [SerializeField] private int spinSpeed = 100;
 
     private PlayerControllerFrogger[] controllers;
-   // private CapsuleCollider[] collisions;
-    //private GameObject[] players;
+    private GameObject[] players;
 
     void Start()
     {
-        //collisions = FindObjectsOfType<CapsuleCollider>();
+        players = GameObject.FindGameObjectsWithTag("Player");
         controllers = FindObjectsOfType<PlayerControllerFrogger>();
-        //players = FindObjectsWithTag("Player");
     }
 
     // Update is called once per frame
@@ -34,7 +32,7 @@ public class BoulderRotate : MonoBehaviour
             for(int i = 0; i < controllers.Length; i++)
             {
                 controllers[i].enabled = false;
-                //collisions[i].enabled = false;
+                players[i].transform.localScale -= new Vector3(0, 0.5f, 0);
             }
         }
     }
