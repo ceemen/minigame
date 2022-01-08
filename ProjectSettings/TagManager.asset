@@ -10,7 +10,7 @@ TagManager:
   - GroundLevelRock
   - HeadLevelRock
   - HighLevelRock
-  - LoseText
+  - Dice
   layers:
   - Default
   - TransparentFX
