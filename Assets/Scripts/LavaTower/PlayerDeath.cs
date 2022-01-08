@@ -20,17 +20,14 @@ namespace LavaTower
         }
         
         private void OnTriggerEnter(Collider other)
-        {
-            if (players.Contains(other.gameObject))
+        {   
+            players.Remove(other.gameObject);
+            spawner.RemovePlayer(other.gameObject);
+            Destroy(other.gameObject);
+            if (players.Count == 0)
             {
-                players.Remove(other.gameObject);
-                spawner.RemovePlayer(other.gameObject);
-                Destroy(other.gameObject);
-                if (players.Count == 0)
-                {
-                    playerDeadText.enabled = true;
-                    SceneTransition.LoadScene(0);
-                }
+                playerDeadText.enabled = true;
+                SceneTransition.LoadScene(0);
             }
         }
     }
