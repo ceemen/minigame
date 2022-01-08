@@ -69,7 +69,7 @@ public class GameCountDownTimer : MonoBehaviour
                 }
 
                 //Gamedifficulty switch events
-                if (eventInterval >=10.0f)
+                if (eventInterval >=15.0f)
                 {
                     eventInterval = 0.0f;
                     if (timerInvtervalEvent != null)
