@@ -32,7 +32,11 @@ public class BoulderRotate : MonoBehaviour
             for(int i = 0; i < controllers.Length; i++)
             {
                 controllers[i].enabled = false;
+<<<<<<< HEAD
                 players[i].transform.localScale -= new Vector3(0, 0.5f, 0);
+=======
+                //collisions[i].enabled = false;
+>>>>>>> master
             }
         }
     }
