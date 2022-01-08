@@ -128,8 +128,11 @@ public class WallPushRandomizer : MonoBehaviour
     private void DifficultySwitch()
     {
         print("Getting Faster");
-        currentGameDifficulty++;
-        //print(currentGameDifficulty);
+        if (currentGameDifficulty < 5)
+        {
+            currentGameDifficulty++;
+        }
+            //print(currentGameDifficulty);
     }
 
     private void SetDelay()
@@ -137,23 +140,23 @@ public class WallPushRandomizer : MonoBehaviour
 
         if (currentGameDifficulty == 0)
         {
-            delay = 1.8f;
+            delay = 1.4f;
         }
         else if (currentGameDifficulty == 1)
         {
-           delay = 1.4f;
+           delay = 1.1f;
         } else if (currentGameDifficulty == 2)
         {
-            delay = 1.0f;
+            delay = 0.9f;
         } else if (currentGameDifficulty == 3)
         {
-            delay = 0.8f;
+            delay = 0.6f;
         } else if (currentGameDifficulty == 4)
         {
-            delay = 0.6f;
+            delay = 0.4f;
         } else if (currentGameDifficulty == 5)
         {
-            delay = 0.4f;
+            delay = 0.3f;
         }
 
     }
