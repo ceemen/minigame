@@ -2,14 +2,13 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace UI
 {
     public class Lobby : Menu
     {
-        [SerializeField] private string scene;
+        [SerializeField] private Animator transition; 
         [SerializeField] private Canvas mainMenu;
         [SerializeField] private Button startButton;
         [SerializeField] private RectTransform panel;
@@ -19,7 +18,7 @@ namespace UI
         public void StartGame()
         {
             inputManager.enabled = false;
-            SceneManager.LoadScene(scene);
+            SceneTransition.LoadScene(3);
         }
 
         public void Back()
