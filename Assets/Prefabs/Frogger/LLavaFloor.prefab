@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 8933564113576003063}
   - component: {fileID: 6573333367405130706}
   - component: {fileID: 398652817358636595}
-  - component: {fileID: 6114422518191065636}
+  - component: {fileID: 1176182567978961645}
   m_Layer: 0
   m_Name: GameLava
   m_TagString: Untagged
@@ -392,7 +392,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.24424672, z: 1}
   m_Center: {x: 0, y: -0.37787664, z: 0}
---- !u!114 &6114422518191065636
+--- !u!114 &1176182567978961645
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -401,10 +401,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8358884003413008695}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4412ec93e56075a4494a0b989c3f460c, type: 3}
+  m_Script: {fileID: 11500000, guid: 26f5cb659b9f049468dae91a8a2b0e84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loseText: {fileID: 0}
 --- !u!1 &8549079799108014966
 GameObject:
   m_ObjectHideFlags: 0

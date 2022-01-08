@@ -2,21 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Frogger;
+using CoOp;
 
 public class Destructor : MonoBehaviour
 {
-    private PlayerControllerFrogger[] players;
+    private List<GameObject> players;
 
-    void Start()
+    private void Start()
     {
-        players = FindObjectsOfType<PlayerControllerFrogger>();
+        players = new List<GameObject>();
+        players.AddRange(GameObject.FindGameObjectsWithTag("Player"));
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
-        for (int i = 0; i < players.Length; i++)
+        players.Remove(collision.gameObject);
+        Destroy(collision.gameObject);
+        if (players.Count == 0)
         {
-            players[i].enabled = false;
+            SceneTransition.LoadScene(0);
         }
     }
 }
