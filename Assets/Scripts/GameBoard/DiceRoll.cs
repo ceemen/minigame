@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class DiceRoll : MonoBehaviour
 {
 
+    public bool beenRolled;
     private Rigidbody diceRb;
     private bool rollActionBool;
     [SerializeField]
@@ -29,21 +30,11 @@ public class DiceRoll : MonoBehaviour
         diceRollAction.action.Disable();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
-
     public void RollDice(InputAction.CallbackContext diceinput)
     {
         rollActionBool = diceinput.ReadValueAsButton();
+
+        beenRolled = true;
 
         if (rollActionBool)
         {
@@ -55,4 +46,5 @@ public class DiceRoll : MonoBehaviour
             diceRb.AddTorque(torqueVector, ForceMode.Impulse);
         }
     }
+
 }
