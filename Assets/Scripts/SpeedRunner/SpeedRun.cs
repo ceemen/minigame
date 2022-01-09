@@ -32,5 +32,16 @@ namespace SRunner
             camPos.x += startSpeed * Time.deltaTime;
             mainCamera.transform.position = camPos;
         }
+
+        public void killPlayer(GameObject player)
+        {
+            foreach (GameObject p in players)
+            {
+                if(p==player)
+                {
+                    p.SetActive(false);
+                }
+            }
+        }
     }
 }
