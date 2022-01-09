@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Frogger;
+using CoOp;
 
 public class End : MonoBehaviour
 {
@@ -15,12 +16,12 @@ public class End : MonoBehaviour
         music.mute = true;
         endFlair.Play(0);
         winText.gameObject.SetActive(true);
-        StartCoroutine(LevelLoad());
+        StartCoroutine(WaitForMusic());
     }
 
-    IEnumerator LevelLoad()
+    private IEnumerator WaitForMusic()
     {
-        yield return new WaitForSeconds(4.0f);
-        SceneManager.LoadScene("Scenes/Menu");
+        yield return new WaitForSeconds(4);
+        SceneTransition.LoadScene(0);
     }
 }
