@@ -1,35 +1,34 @@
-using System.Collections;
 using System.Collections.Generic;
-using Frogger;
 using UnityEngine;
-using Menu;
 
-public class CameraPan : MonoBehaviour
+namespace Frogger
 {
-    [SerializeField] private Vector3 offset;
-    private readonly List<Transform> players = new List<Transform>();
-
-    private void Start()
+    public class CameraPan : MonoBehaviour
     {
-        var controllers = FindObjectsOfType<PlayerControllerFrogger>();
-        foreach (var player in controllers)
-        {
-            players.Add(player.transform);
-        }
-    }
+        [SerializeField] private Vector3 offset;
+        private float progress = float.NegativeInfinity;
+        private readonly List<Transform> players = new List<Transform>();
 
-    private void LateUpdate()
-    {
-        players.RemoveAll(player => player == null);
-        var position = transform.position;
-        foreach (var player in players)
+        private void Start()
         {
-            var playerDistance = player.position.z;
-            
-            if (playerDistance <= position.z - offset.z)
-                return;
-            position.z = playerDistance;
+            var controllers = FindObjectsOfType<PlayerControllerFrogger>();
+            foreach (var player in controllers)
+            {
+                players.Add(player.transform);
+            }
         }
-        transform.position = position + offset;
+
+        private void LateUpdate()
+        {
+            // remove deleted characters
+            players.RemoveAll(player => player == null);
+            foreach (var player in players)
+            {
+                var playerProgress = player.position.z;
+                if (playerProgress > progress)
+                    progress = playerProgress;
+            }
+            transform.position = Vector3.forward * progress + offset;
+        }
     }
 }
