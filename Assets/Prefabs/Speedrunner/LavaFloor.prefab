@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 146032798210955835}
-  - component: {fileID: 6634629529638078549}
   m_Layer: 0
   m_Name: LavaFloor
   m_TagString: Untagged
@@ -32,18 +31,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6634629529638078549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2414714062465439679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d67151cda19edd4a9263a9621e54fb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6064819415356833061
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,6 +44,7 @@ GameObject:
   - component: {fileID: 2045762731641470734}
   - component: {fileID: 416702344720389178}
   - component: {fileID: 6935777674116640489}
+  - component: {fileID: 5978963381875567201}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -156,3 +144,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: {x: 0.05, y: 0.05}
   flowChange: {x: 0.01, y: 1}
+--- !u!114 &5978963381875567201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6064819415356833061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d67151cda19edd4a9263a9621e54fb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
