@@ -10,6 +10,7 @@ namespace LavaTower
         [SerializeField] private bool timerIsRunning = false;
         [SerializeField] private TextMeshProUGUI timeText;
         [SerializeField] private TextMeshProUGUI timeRunoutText;
+        [SerializeField] private PlayerSpawner spawner;
 
         private void Start()
         {
@@ -28,6 +29,7 @@ namespace LavaTower
                 else
                 {
                     timeRunoutText.enabled = true;
+                    spawner.RemovePlayer(gameObject);
                     SceneTransition.LoadScene(0);
                     timeRemaining = 0;
                     timerIsRunning = false;

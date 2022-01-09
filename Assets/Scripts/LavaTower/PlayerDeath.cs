@@ -19,7 +19,7 @@ namespace LavaTower
         }
         
         private void OnTriggerEnter(Collider other)
-        {   
+        {
             players.Remove(other.gameObject);
             spawner.RemovePlayer(other.gameObject);
             Destroy(other.gameObject);
