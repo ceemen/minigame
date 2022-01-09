@@ -1500,7 +1500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2513dedd7626b934fa79a2d867e1637f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: -0.2, y: 0}
+  speed: {x: -0.03, y: 0}
   flowChange: {x: 0, y: 0}
 --- !u!4 &2042999533685532895 stripped
 Transform:
