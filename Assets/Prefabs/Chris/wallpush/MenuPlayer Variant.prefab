@@ -19,10 +19,26 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6554402270029235661, guid: 9fde818cdf32d7f4ca187dd8cf188d03, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554402270029235661, guid: 9fde818cdf32d7f4ca187dd8cf188d03, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554402270029235661, guid: 9fde818cdf32d7f4ca187dd8cf188d03, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6554402270029235661, guid: 9fde818cdf32d7f4ca187dd8cf188d03, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8500470753092830001, guid: 9fde818cdf32d7f4ca187dd8cf188d03, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 13400000, guid: e642961e272cfc74c8dd125ec7da41c2, type: 2}
+      objectReference: {fileID: 13400000, guid: fde598c385291b347afba758c6625ef3, type: 2}
     - target: {fileID: 8500470753092830002, guid: 9fde818cdf32d7f4ca187dd8cf188d03, type: 3}
       propertyPath: m_RootOrder
       value: 0
