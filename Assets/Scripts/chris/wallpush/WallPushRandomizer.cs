@@ -41,7 +41,6 @@ public class WallPushRandomizer : MonoBehaviour
         GameCountDownTimer.gameTimeStartEvent -= ChangeGameState;
         GameCountDownTimer.gameTimeEndEvent -= ChangeGameState;
         GameCountDownTimer.gameTimeSequenceEvent -= SetWallSequenceBool;
-
     }
 
     private void Start()
@@ -128,8 +127,11 @@ public class WallPushRandomizer : MonoBehaviour
     private void DifficultySwitch()
     {
         print("Getting Faster");
-        currentGameDifficulty++;
-        //print(currentGameDifficulty);
+        if (currentGameDifficulty < 5)
+        {
+            currentGameDifficulty++;
+        }
+            //print(currentGameDifficulty);
     }
 
     private void SetDelay()
@@ -137,23 +139,23 @@ public class WallPushRandomizer : MonoBehaviour
 
         if (currentGameDifficulty == 0)
         {
-            delay = 1.8f;
+            delay = 1.0f;
         }
         else if (currentGameDifficulty == 1)
         {
-           delay = 1.4f;
+           delay = 0.8f;
         } else if (currentGameDifficulty == 2)
         {
-            delay = 1.0f;
+            delay = 0.7f;
         } else if (currentGameDifficulty == 3)
         {
-            delay = 0.8f;
+            delay = 0.6f;
         } else if (currentGameDifficulty == 4)
         {
-            delay = 0.6f;
+            delay = 0.4f;
         } else if (currentGameDifficulty == 5)
         {
-            delay = 0.4f;
+            delay = 0.2f;
         }
 
     }
@@ -193,7 +195,7 @@ public class WallPushRandomizer : MonoBehaviour
             print("disabled event");
             inWallSequence = false;
         }
-
+        
     }
 
     private void PushOut(int index)
@@ -206,7 +208,7 @@ public class WallPushRandomizer : MonoBehaviour
     private void PushIn(int index)
     {
         wallRocks[index].GetComponent<Animator>().speed = 1 / delay;
-        wallRocks[index].GetComponent<Animator>().SetTrigger("Pull");
+        wallRocks[index].GetComponent<Animator>().SetTrigger("Retract");
         wallRocks[index].GetComponent<RockWallObj>().SetOutBool(false);
     }
 
