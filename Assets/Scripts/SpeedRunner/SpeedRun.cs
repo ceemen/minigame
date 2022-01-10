@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using CoOp;
 using UnityEngine;
 
 
@@ -13,24 +14,41 @@ namespace SRunner
 
         [SerializeField] private GameObject mainCamera;
 
-        private GameObject[] players;
+        private List<GameObject> players;
 
         void Start()
         {
-            players = GameObject.FindGameObjectsWithTag("Player");
+            players = new List<GameObject>();
+            players.AddRange(GameObject.FindGameObjectsWithTag("Player"));
         }
 
 
         void Update()
         {
             startSpeed += speedInc * Time.deltaTime;
-            foreach (GameObject player in players)
+            if(players.Count>0)
             {
-                player.GetComponent<SRunController>().runSpeed += speedInc * Time.deltaTime;
+                foreach (GameObject player in players)
+                {
+                    if(player!=null)
+                        player.GetComponent<SRunController>().runSpeed += speedInc * Time.deltaTime;
+                }
             }
             Vector3 camPos = mainCamera.transform.position;
             camPos.x += startSpeed * Time.deltaTime;
             mainCamera.transform.position = camPos;
+        }
+
+        public void killPlayer(GameObject player)
+        {
+            foreach (GameObject p in players)
+            {
+                if(p==player)
+                {
+                    players.Remove(p);
+                    Destroy(p);
+                }
+            }
         }
     }
 }

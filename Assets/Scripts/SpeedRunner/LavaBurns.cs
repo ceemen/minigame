@@ -2,11 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LavaBurns : MonoBehaviour
+
+namespace SRunner
 {
-    private void OnTriggerEnter(Collider other)
+    public class LavaBurns : MonoBehaviour
     {
-        if (other.tag == "Player")
-            Destroy(other.gameObject);
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.tag == "Player")
+            {
+                GameObject gM = GameObject.Find("GameManager");
+                SpeedRun script = (SpeedRun)gM.GetComponent(typeof(SpeedRun));
+                script.killPlayer(other.gameObject);
+            }
+        }
     }
 }
