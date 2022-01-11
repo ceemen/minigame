@@ -46,10 +46,10 @@ namespace Menu
             playerAnimation.Animate(velocity, grounded);
         }
 
-        private bool IsGrounded()
+        protected virtual bool IsGrounded()
         {
             var ray = new Ray(transform.position + Vector3.up * 0.1f, Vector3.down);
-            return Physics.Raycast(ray, out var hitInfo, 0.2f, LayerMask.GetMask("Floor"));
+            return Physics.Raycast(ray, out _, 0.2f, LayerMask.GetMask("Floor"));
         }
     }
 }
