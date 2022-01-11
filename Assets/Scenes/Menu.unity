@@ -319,6 +319,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lava
       objectReference: {fileID: 0}
+    - target: {fileID: 2913367432902255230, guid: 9c636108beddc1840bb1916edd79c68a, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9c636108beddc1840bb1916edd79c68a, type: 3}
 --- !u!1001 &70109608
@@ -464,7 +468,6 @@ GameObject:
   m_Component:
   - component: {fileID: 101270313}
   - component: {fileID: 101270317}
-  - component: {fileID: 101270316}
   - component: {fileID: 101270315}
   - component: {fileID: 101270314}
   m_Layer: 5
@@ -4996,7 +4999,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1528707495}
   - component: {fileID: 1528707499}
-  - component: {fileID: 1528707498}
   - component: {fileID: 1528707497}
   - component: {fileID: 1528707496}
   m_Layer: 5
