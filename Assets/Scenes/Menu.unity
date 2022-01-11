@@ -1477,7 +1477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47e3b1b2bdd542eb93a713252f94ac64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 0}
+  scene: 3
   mainMenu: {fileID: 917653338}
   startButton: {fileID: 588472613}
   panel: {fileID: 1528707495}
@@ -2447,7 +2447,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh43226
+  m_Name: pb_Mesh33618
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
