@@ -13,19 +13,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.0107421
   m_Center: {x: -0.0010326208, y: 0, z: 0.010741533}
---- !u!114 &8151979254417480983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 994437151525631882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe7be8977b2e2d446a12b4acd2593e4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spinSpeed: 100
 --- !u!114 &2451897298046934182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,6 +31,19 @@ MonoBehaviour:
   - {fileID: 3239060622759158310}
   - {fileID: 8343867221269206224}
   - {fileID: 6983860049001858744}
+--- !u!114 &8151979254417480983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994437151525631882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe7be8977b2e2d446a12b4acd2593e4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinSpeed: 100
 --- !u!1 &2202876807326369993
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,15 +796,15 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 1ac62b1f957c21e4093f034237f0c4dd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 27f44a0fa1436a043b0e51f1cce03566, type: 2}
+      objectReference: {fileID: 2100000, guid: c781f807ab64ce24ea1b5269a1cd4ede, type: 2}
     - target: {fileID: -7511558181221131132, guid: 1ac62b1f957c21e4093f034237f0c4dd, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: 27f44a0fa1436a043b0e51f1cce03566, type: 2}
+      objectReference: {fileID: 2100000, guid: c781f807ab64ce24ea1b5269a1cd4ede, type: 2}
     - target: {fileID: -7511558181221131132, guid: 1ac62b1f957c21e4093f034237f0c4dd, type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: 27f44a0fa1436a043b0e51f1cce03566, type: 2}
+      objectReference: {fileID: 2100000, guid: c781f807ab64ce24ea1b5269a1cd4ede, type: 2}
     - target: {fileID: 919132149155446097, guid: 1ac62b1f957c21e4093f034237f0c4dd, type: 3}
       propertyPath: m_Name
       value: Bolder
