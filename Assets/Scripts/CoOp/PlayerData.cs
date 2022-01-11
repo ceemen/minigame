@@ -35,14 +35,9 @@ namespace CoOp
             _score += amount;
         }
 
-        public static bool operator ==(PlayerData x, PlayerData y)
+        public bool Equals(PlayerData other)
         {
-            return x._controlScheme == y._controlScheme && x._device == y._device;
-        }
-
-        public static bool operator !=(PlayerData x, PlayerData y)
-        {
-            return !(x == y);
+            return _controlScheme == other._controlScheme && _device == other._device;
         }
     }
 }

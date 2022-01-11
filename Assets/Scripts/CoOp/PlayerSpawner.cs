@@ -1,22 +1,28 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 namespace CoOp
 {
+    [System.Serializable]
+    public class PlayerRemovedEvent : UnityEvent<GameObject>
+    {}
     public class PlayerSpawner : MonoBehaviour
     {
         [SerializeField] private Vector3[] spawnPoints;
         [SerializeField] private GameObject playerPrefab;
-        private readonly List<GameObject> _players = new List<GameObject>();
-        private PlayerManager _manager;
-        private int _scoreGiven = 1;
+        // Triggered when a player is removed.
+        [SerializeField] private PlayerRemovedEvent playerRemoved;
+        // Triggered when all players are removed.
+        [SerializeField] private UnityEvent playersRemoved;
+        private readonly List<PlayerInput> _players = new List<PlayerInput>();
+        private readonly List<int> _winners = new List<int>();
 
         private void Start()
         {
-            _manager = PlayerManager.GetInstance();
-            // Spawn players
-            var players = _manager.GetPlayers();
+            var players = PlayerManager.GetPlayers();
             for (var p = 0; p < players.Count; p++)
             {
                 var player = players[p];
@@ -28,25 +34,52 @@ namespace CoOp
                     player.GetDevice());
                 newPlayer.transform.position = spawnPoints[p];
                 newPlayer.GetComponentInChildren<Renderer>().material.color = PlayerManager.GetPlayerColour(p);
-                _players.Add(newPlayer.gameObject);
+                _players.Add(newPlayer);
             }
         }
 
         public void RemovePlayer(GameObject player)
         {
-            // Skip if player is already removed.
-            if (!_players.Contains(player))
+            // Find player.
+            PlayerInput playerInput = null;
+            foreach (var p in _players)
+            {
+                if (p.gameObject == player)
+                    playerInput = p;
+            }
+            // Skip if player not found.
+            if (playerInput == null)
                 return;
-            // Add score to the player
-            var playerIndex = _players.IndexOf(player);
-            _manager.AddScore(playerIndex, _scoreGiven);
-            _scoreGiven += 1;
-            _players.Remove(player);
+            // Add score to the player.
+            _winners.Insert(0, playerInput.playerIndex);
+            _players.Remove(playerInput);
+            playerRemoved.Invoke(player);
             // Check if only one player left.
+            if (_players.Count > 1)
+                return;
             if (_players.Count == 1)
             {
-                print("Player x won");
+                _winners.Insert(0, _players[0].playerIndex);
+                playerRemoved.Invoke(_players[0].gameObject);
             }
+            PlayerManager.UpdateScores(_winners);
+            playersRemoved.Invoke();
+        }
+
+        public List<GameObject> GetPlayers()
+        {
+            var playerCount = _players.Count;
+            var players = new List<GameObject>();
+            for (var p = 0; p < playerCount; p++)
+            {
+                players.Add(_players[p].gameObject);
+            }
+            return players;
+        }
+
+        public List<PlayerInput> GetPlayerInputs()
+        {
+            return _players;
         }
     }
 }

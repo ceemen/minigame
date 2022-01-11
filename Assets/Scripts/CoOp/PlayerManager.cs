@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 namespace CoOp
 {
@@ -16,52 +17,58 @@ namespace CoOp
 
         private readonly List<PlayerData> _players = new List<PlayerData>();
 
-        public static PlayerManager GetInstance()
-        {
-            return _instance;
-        }
-
         public static Color GetPlayerColour(int playerIndex)
         {
             return PlayerColours[playerIndex % PlayerColours.Length];
         }
 
-        public List<PlayerData> GetPlayers()
+        public static List<PlayerData> GetPlayers()
         {
-            return _players;
+            return _instance._players;
         }
 
         private void Awake()
         {
-            // If player manager doesn't already exist, make this the singleton.
-            if (_instance == null)
+            // Destroy this clone if instance already exists.
+            if (_instance != null)
             {
-                _instance = this;
-                DontDestroyOnLoad(gameObject);
+                Destroy(gameObject);
                 return;
             }
-            // Otherwise delete this clone.
-            Destroy(gameObject);
+            // Make this the instance otherwise.
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
+        // Call at the end of the games.
+        public static void RemovePlayers()
+        {
+            _instance._players.Clear();
         }
 
         // Returns true if player has been added, false if player was already added.
-        public bool AddPlayer(PlayerInput newPlayer)
+        public static bool AddPlayer(PlayerInput newPlayer)
         {
-            print($"Player joined: {newPlayer.devices.ToArray()[0]} {newPlayer.devices.Count}");
             var newPlayerData = new PlayerData(newPlayer.currentControlScheme, newPlayer.devices[0]);
-            // Ignore players that have already been added.
-            foreach (var playerData in _players)
+            // Check if the player has already been added.
+            foreach (var playerData in _instance._players)
             {
-                if (playerData == newPlayerData)
+                if (playerData.Equals(newPlayerData))
                     return false;
             }
-            _players.Add(newPlayerData);
+            print($"Player {newPlayer.playerIndex} joined with {newPlayer.devices.Count} devices");
+            _instance._players.Add(newPlayerData);
             return true;
         }
 
-        public void AddScore(int playerIndex, int amount)
+        public static void UpdateScores(IEnumerable<int> players)
         {
-            _players[playerIndex].AddScore(amount);
+            var score = 1;
+            foreach (var player in players)
+            {
+                _instance._players[player].AddScore(score);
+                score++;
+            }
         }
     }
 }
