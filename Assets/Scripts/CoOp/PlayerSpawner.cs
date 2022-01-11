@@ -55,13 +55,15 @@ namespace CoOp
             _players.Remove(playerInput);
             playerRemoved.Invoke(player);
             // Check if only one player left.
+            if (_players.Count > 1)
+                return;
             if (_players.Count == 1)
             {
                 _winners.Insert(0, _players[0].playerIndex);
-                PlayerManager.UpdateScores(_winners);
                 playerRemoved.Invoke(_players[0].gameObject);
-                playersRemoved.Invoke();
             }
+            PlayerManager.UpdateScores(_winners);
+            playersRemoved.Invoke();
         }
 
         public List<GameObject> GetPlayers()
@@ -70,7 +72,7 @@ namespace CoOp
             var players = new List<GameObject>();
             for (var p = 0; p < playerCount; p++)
             {
-                players[p] = _players[p].gameObject;
+                players.Add(_players[p].gameObject);
             }
             return players;
         }

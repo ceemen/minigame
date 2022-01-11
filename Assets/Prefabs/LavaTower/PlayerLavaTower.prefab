@@ -38,8 +38,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee8af824695b4ed69466a07e5e65f25f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpHeight: 12
-  superJumpPlatform: {fileID: 7988318059641522848, guid: 43f7c8b81fbd5204eac74593baa49173, type: 3}
+  jumpHeight: 13
 --- !u!1001 &4383919706327516056
 PrefabInstance:
   m_ObjectHideFlags: 0
