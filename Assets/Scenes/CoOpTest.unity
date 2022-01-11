@@ -172,6 +172,12 @@ MonoBehaviour:
   - {x: 1, y: 0, z: 0}
   - {x: 2, y: 0, z: 0}
   playerPrefab: {fileID: 4804733164493970245, guid: a7302c9efd6530845b7a9b2b8f1563b1, type: 3}
+  playerRemoved:
+    m_PersistentCalls:
+      m_Calls: []
+  playersRemoved:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &792359118
 GameObject:
   m_ObjectHideFlags: 0

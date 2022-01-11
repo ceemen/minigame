@@ -60,14 +60,16 @@ public class GameCountDownTimer : MonoBehaviour
                 
                 TimeDisplayConversion(gameTime);
 
-                if (initiateSequenceTime >= 50.0f)
+                //sequential wall event
+                if (initiateSequenceTime >= 40.0f)
                 {
                     lockSequenceTimer = true;
                     initiateSequenceTime = 0;
                     gameTimeSequenceEvent();
                 }
 
-                if (eventInterval >=20.0f)
+                //Gamedifficulty switch events
+                if (eventInterval >=15.0f)
                 {
                     eventInterval = 0.0f;
                     if (timerInvtervalEvent != null)

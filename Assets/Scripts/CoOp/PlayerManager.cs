@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 namespace CoOp
 {
@@ -28,28 +29,34 @@ namespace CoOp
 
         private void Awake()
         {
-            // If player manager doesn't already exist, make this the singleton.
-            if (_instance == null)
+            // Destroy this clone if instance already exists.
+            if (_instance != null)
             {
-                _instance = this;
-                DontDestroyOnLoad(gameObject);
+                Destroy(gameObject);
                 return;
             }
-            // Otherwise delete this clone.
-            Destroy(gameObject);
+            // Make this the instance otherwise.
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
+        // Call at the end of the games.
+        public static void RemovePlayers()
+        {
+            _instance._players.Clear();
         }
 
         // Returns true if player has been added, false if player was already added.
         public static bool AddPlayer(PlayerInput newPlayer)
         {
-            var newPlayerData = new PlayerData(newPlayer.currentControlScheme, newPlayer.devices.ToArray());
-            // Check if the player has already been added
+            var newPlayerData = new PlayerData(newPlayer.currentControlScheme, newPlayer.devices[0]);
+            // Check if the player has already been added.
             foreach (var playerData in _instance._players)
             {
                 if (playerData.Equals(newPlayerData))
                     return false;
             }
-            print($"Player {newPlayer.playerIndex} joined: {newPlayer.currentControlScheme}");
+            print($"Player {newPlayer.playerIndex} joined with {newPlayer.devices.Count} devices");
             _instance._players.Add(newPlayerData);
             return true;
         }

@@ -10,7 +10,7 @@ namespace SRunner
 
         public int numPlayers = 1;
 
-        [SerializeField] private int gameLength = 3;
+        [SerializeField] private int gameLength = 300;
         [SerializeField] private GameObject[] floatPlatforms;
         [SerializeField] private GameObject[] raisedPlatforms;
 
@@ -24,7 +24,7 @@ namespace SRunner
             int raiseIndex = 0;
             for (int i = 0; i < gameLength; i++)
             {
-                spawnPosition.x = i * 12;
+                spawnPosition.x = i * 13;
                 spawnPosition.y = platformHeight * 2;
                 floatIndex = Random.Range(0, floatPlatforms.Length);
                 raiseIndex = Random.Range(0, raisedPlatforms.Length);
@@ -34,7 +34,7 @@ namespace SRunner
                     spawnPosition.z = j * 3;
                     if (i == 0)
                         Instantiate(floatPlatforms[0], spawnPosition, Quaternion.identity);
-                    if (platformHeight == 0)
+                    else if (platformHeight == 0)
                     {
                         Instantiate(floatPlatforms[floatIndex], spawnPosition, Quaternion.identity);
                     }

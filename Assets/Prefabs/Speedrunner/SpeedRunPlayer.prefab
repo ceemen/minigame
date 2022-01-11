@@ -34,6 +34,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3964424775446516987, guid: 5392b6213c2524d4e924ec796b161886, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 616187ff436fa1a4398476fd693a7db9, type: 2}
     - target: {fileID: 6043361694742427929, guid: 5392b6213c2524d4e924ec796b161886, type: 3}
       propertyPath: m_ActionEvents.Array.data[0].m_PersistentCalls.m_Calls.Array.size
       value: 1

@@ -11,6 +11,7 @@ TagManager:
   - HeadLevelRock
   - HighLevelRock
   - Dice
+  - RollReader
   layers:
   - Default
   - TransparentFX
@@ -19,8 +20,9 @@ TagManager:
   - Water
   - UI
   - Floor
-  - 
-  - 
+  - DiceRoll
+  - DiceReader
+  - GameEnvironment
   - 
   - 
   - 
