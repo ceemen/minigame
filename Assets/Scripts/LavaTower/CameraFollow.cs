@@ -12,8 +12,8 @@ namespace LavaTower
         
         private void Start()
         {
-            var controllers = FindObjectsOfType<PlayerControllerLavaTower>();
-            foreach (var player in controllers)
+            var objects = spawner.GetPlayers();
+            foreach (var player in objects)
             {
                 players.Add(player.transform);
             }
@@ -29,7 +29,6 @@ namespace LavaTower
                 if (playerHeight > position.y)
                 {
                     position.y = playerHeight;
-                    spawner.RemovePlayer(player.gameObject);
                 }
             }
 

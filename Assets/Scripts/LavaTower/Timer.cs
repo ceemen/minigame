@@ -29,7 +29,6 @@ namespace LavaTower
                 else
                 {
                     timeRunoutText.enabled = true;
-                    spawner.RemovePlayer(gameObject);
                     SceneTransition.LoadScene(0);
                     timeRemaining = 0;
                     timerIsRunning = false;
@@ -45,6 +44,11 @@ namespace LavaTower
             float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
             timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
+
+        public void TimerStop()
+        {
+            timerIsRunning = false;
         }
     }
 }

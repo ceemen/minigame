@@ -18,7 +18,7 @@ namespace UI
         public void StartGame()
         {
             inputManager.enabled = false;
-            SceneTransition.LoadScene(5);
+            SceneTransition.LoadScene(3);
         }
 
         public void Back()
