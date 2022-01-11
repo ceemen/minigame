@@ -27,5 +27,15 @@ namespace SRunner
             centiseconds = (totalTimeMillis % 1000) / 10;
             text.text = "Time Survived: " + string.Format("{0:D2}:{1:D2}:{2:D2}", minutes, seconds, centiseconds);
         }
+
+        public void EndTimer()
+        {
+            Destroy(gameObject);
+        }
+
+        public string GetTime()
+        {
+            return "Time: " + string.Format("{0:D2}:{1:D2}:{2:D2}", minutes, seconds, centiseconds);
+        }
     }
 }

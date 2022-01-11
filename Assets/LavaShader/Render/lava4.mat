@@ -98,7 +98,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Speed: 0.01
+    - Speed: -0.01
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -125,7 +125,7 @@ Material:
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
-    - tilling: 0
+    - tilling: 3
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
