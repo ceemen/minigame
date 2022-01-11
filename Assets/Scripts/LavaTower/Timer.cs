@@ -1,3 +1,4 @@
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using CoOp;
@@ -9,7 +10,7 @@ namespace LavaTower
         [SerializeField] private float timeRemaining = 10;
         [SerializeField] private bool timerIsRunning = false;
         [SerializeField] private TextMeshProUGUI timeText;
-        [SerializeField] private TextMeshProUGUI timeRunoutText;
+        [SerializeField] private PlayerSpawner spawner;
 
         private void Start()
         {
@@ -27,8 +28,8 @@ namespace LavaTower
                 }
                 else
                 {
-                    timeRunoutText.enabled = true;
-                    SceneTransition.LoadScene(0);
+                    timeText.enabled = false;
+                    GetYPosition();
                     timeRemaining = 0;
                     timerIsRunning = false;
                 }
@@ -43,6 +44,20 @@ namespace LavaTower
             float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
             timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
+
+        public void TimerStop()
+        {
+            timerIsRunning = false;
+        }
+        
+        private void GetYPosition()
+        {
+            var players = spawner.GetPlayers().OrderBy(p => p.transform.position.y).ToList();
+            foreach (var player in players)
+            {
+                spawner.RemovePlayer(player.gameObject);
+            }
         }
     }
 }
