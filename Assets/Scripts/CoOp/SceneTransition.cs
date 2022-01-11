@@ -8,6 +8,7 @@ namespace CoOp
         private int _sceneIndex;
         private static SceneTransition _instance;
         private static readonly int Start = Animator.StringToHash("Start");
+        private int hubIndex = 0;
 
         private void Awake()
         {
@@ -31,6 +32,11 @@ namespace CoOp
             _instance._sceneIndex = index;
         }
 
+        public static void LoadHub()
+        {
+            LoadScene(_instance.hubIndex);
+        }
+        
         public void AnimationFinished()
         {
             var fadeOut = _animator.GetCurrentAnimatorStateInfo(0).IsName("Fade Out");
