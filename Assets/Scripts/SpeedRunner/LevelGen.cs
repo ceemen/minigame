@@ -15,6 +15,8 @@ namespace SRunner
         [SerializeField] private GameObject[] raisedPlatforms;
 
         private int platformHeight;
+        private int prevFloat = 0;
+        private int prevRaised;
 
         void Start()
         {
@@ -27,7 +29,11 @@ namespace SRunner
                 spawnPosition.x = i * 13;
                 spawnPosition.y = platformHeight * 2;
                 floatIndex = Random.Range(0, floatPlatforms.Length);
+                if (floatIndex == prevFloat)
+                    floatIndex = (++floatIndex) % floatPlatforms.Length;
                 raiseIndex = Random.Range(0, raisedPlatforms.Length);
+                if (raiseIndex == prevFloat)
+                    raiseIndex = (++raiseIndex) % raisedPlatforms.Length;
 
                 for (int j = 0; j < numPlayers; j++)
                 {

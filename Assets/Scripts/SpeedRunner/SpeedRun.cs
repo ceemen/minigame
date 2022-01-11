@@ -17,6 +17,7 @@ namespace SRunner
         [SerializeField] private GameObject mainCamera;
         [SerializeField] private GameObject timer;
 
+
         private List<GameObject> players;
 
         private bool isRunning = true;
