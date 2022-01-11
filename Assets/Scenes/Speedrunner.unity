@@ -423,6 +423,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloatTerrain1
       objectReference: {fileID: 0}
+    - target: {fileID: 2185403372375354697, guid: c3fa5ff865e3f61428cd98970afd79ae, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4165922545890347197, guid: c3fa5ff865e3f61428cd98970afd79ae, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -652,6 +656,12 @@ MonoBehaviour:
   - {x: 0, y: 1, z: 6}
   - {x: 0, y: 1, z: 9}
   playerPrefab: {fileID: 7204878030939521008, guid: d875f7a9ef15b7847b91d4d3129c41f3, type: 3}
+  playerRemoved:
+    m_PersistentCalls:
+      m_Calls: []
+  playersRemoved:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &667935987
 Transform:
   m_ObjectHideFlags: 0
