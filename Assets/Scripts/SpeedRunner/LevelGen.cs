@@ -20,6 +20,7 @@ namespace SRunner
 
         void Start()
         {
+            numPlayers = GameObject.FindGameObjectsWithTag("Player").Length;
             platformHeight = 0;
             Vector3 spawnPosition = new Vector3();
             int floatIndex = 0;
@@ -43,10 +44,12 @@ namespace SRunner
                     else if (platformHeight == 0)
                     {
                         Instantiate(floatPlatforms[floatIndex], spawnPosition, Quaternion.identity);
+                        prevFloat = floatIndex;
                     }
                     else if (platformHeight > 0)
                     {
                         Instantiate(raisedPlatforms[raiseIndex], spawnPosition, Quaternion.identity);
+                        prevRaised = raiseIndex;
                     }
                 }
 
