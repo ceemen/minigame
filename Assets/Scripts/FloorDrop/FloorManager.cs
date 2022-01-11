@@ -1,11 +1,12 @@
 using System.Collections.Generic;
+using CoOp;
 using UnityEngine;
 
 namespace FloorDrop
 {
     public class FloorManager : MonoBehaviour
     {
-        [SerializeField] private Vector2Int size;
+        private const int Size = 10;
         [SerializeField] private GameObject floorTilePrefab;
         private readonly List<FloorTile> _tiles = new List<FloorTile>();
 
@@ -21,14 +22,16 @@ namespace FloorDrop
 
         private void SpawnTiles()
         {
-            for (var y = 0; y < size.y; y++)
+            var size = PlayerManager.GetPlayers().Count * 2 + Size;
+            var halfSize = size / 2.0f;
+            for (var y = 0; y < size; y++)
             {
-                for (var x = 0; x < size.x; x++)
+                for (var x = 0; x < size; x++)
                 {
                     var tilePosition = new Vector3(
-                        0.5f + x - size.x / 2.0f,
+                        0.5f + x - halfSize,
                         0, 
-                        0.5f + y - size.y / 2.0f);
+                        0.5f + y - halfSize);
                     var newTile = Instantiate(floorTilePrefab, tilePosition, Quaternion.identity, transform);
                     _tiles.Add(newTile.GetComponent<FloorTile>());
                 }
