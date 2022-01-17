@@ -20,7 +20,7 @@ namespace CoOp
         private readonly List<PlayerInput> _players = new List<PlayerInput>();
         private readonly List<int> _winners = new List<int>();
 
-        private void Awake()
+        private void Start()
         {
             var players = PlayerManager.GetPlayers();
             for (var p = 0; p < players.Count; p++)
