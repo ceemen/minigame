@@ -7,6 +7,7 @@ namespace LavaTower
     {
         private MeshRenderer _mr;
         private BoxCollider _bc;
+
         private void Awake()
         {
             _mr = GetComponentInChildren<MeshRenderer>();
