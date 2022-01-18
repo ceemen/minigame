@@ -22,6 +22,6 @@ public class End : MonoBehaviour
     private IEnumerator WaitForMusic()
     {
         yield return new WaitForSeconds(4);
-        SceneTransition.LoadScene(0);
+        SceneTransition.LoadHub();
     }
 }

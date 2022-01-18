@@ -5,10 +5,10 @@ namespace CoOp
     public class SceneTransition : MonoBehaviour
     {
         private Animator _animator;
-        private int _sceneIndex;
+        private string _scene;
+        private const string HubScene = "Scenes/Hub";
         private static SceneTransition _instance;
         private static readonly int Start = Animator.StringToHash("Start");
-        private int hubIndex = 0;
 
         private void Awake()
         {
@@ -24,17 +24,17 @@ namespace CoOp
             Destroy(gameObject);
         }
         
-        public static void LoadScene(int index)
+        public static void LoadScene(string scene)
         {
             // start the fade
             _instance._animator.SetTrigger(Start);
             // set the scene index
-            _instance._sceneIndex = index;
+            _instance._scene = scene;
         }
 
         public static void LoadHub()
         {
-            LoadScene(_instance.hubIndex);
+            LoadScene(HubScene);
         }
         
         public void AnimationFinished()
@@ -43,8 +43,8 @@ namespace CoOp
             if (fadeOut)
                 return;
             // once the fade has finished, switch to scene
-            UnityEngine.SceneManagement.SceneManager.LoadScene(_sceneIndex);
-            print($"going to {_sceneIndex}");
+            print($"going to {_scene}");
+            UnityEngine.SceneManagement.SceneManager.LoadScene(_scene);
         }
     }
 }
