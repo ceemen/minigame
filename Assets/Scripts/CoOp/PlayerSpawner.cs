@@ -50,12 +50,11 @@ namespace CoOp
                 return;
             // Add score to the player.
             RemovePlayerInput(playerInput);
-            // Skip if at least 2 player still alive
-            if (_players.Count > 1)
-                return;
-            // Make the last player standing the winner
-            RemovePlayerInput(_players[0]);
-            playersRemoved.Invoke();
+            // Make the last player standing the winner automatically
+            if (_players.Count == 1) {
+                RemovePlayerInput(_players[0]);
+                playersRemoved.Invoke();
+            }
         }
 
         private void RemovePlayerInput(PlayerInput player)
