@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -18,7 +17,6 @@ namespace CoOp
         // Triggered when all players are removed.
         [SerializeField] private UnityEvent playersRemoved;
         private readonly List<PlayerInput> _players = new List<PlayerInput>();
-        private readonly List<int> _winners = new List<int>();
 
         private void Start()
         {
@@ -51,18 +49,15 @@ namespace CoOp
             if (playerInput == null)
                 return;
             // Add score to the player.
-            _winners.Insert(0, playerInput.playerIndex);
+            PlayerManager.AddWinner(playerInput.playerIndex);
             _players.Remove(playerInput);
             playerRemoved.Invoke(player);
-            // Check if only one player left.
+            // Skip if at least 2 player still alive
             if (_players.Count > 1)
                 return;
-            if (_players.Count == 1)
-            {
-                _winners.Insert(0, _players[0].playerIndex);
-                playerRemoved.Invoke(_players[0].gameObject);
-            }
-            PlayerManager.UpdateScores(_winners);
+            // Make the last player standing the winner
+            PlayerManager.AddWinner(_players[0].playerIndex);
+            playerRemoved.Invoke(_players[0].gameObject);
             playersRemoved.Invoke();
         }
 
