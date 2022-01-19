@@ -6,19 +6,23 @@ using CoOp;
 
 public class Destructor : MonoBehaviour
 {
-    private List<GameObject> players;
     [SerializeField] private List<AudioSource> deathSounds;
     private AudioSource deathNoise;
 
+    private PlayerSpawner spawner;
+    private List<GameObject> players;
+
     private void Start()
     {
-        players = new List<GameObject>();
-        players.AddRange(GameObject.FindGameObjectsWithTag("Player"));
+        spawner = FindObjectOfType<PlayerSpawner>();
+        players = spawner.GetPlayers();
+        //players = new List<GameObject>();
+        //players.AddRange(GameObject.FindGameObjectsWithTag("Player"));
     }
 
     void OnTriggerEnter(Collider collision)
     {
-        players.Remove(collision.gameObject);
+        //players.Remove(collision.gameObject);
         int randomNumber = Random.Range(1, deathSounds.Count);
         switch (randomNumber)
         {
@@ -47,6 +51,9 @@ public class Destructor : MonoBehaviour
                 deathNoise.Play(0);
                 break;
         }
+
+        players.Remove(collision.gameObject);
+        spawner.RemovePlayer(collision.gameObject);
         Destroy(collision.gameObject);
         if (players.Count == 0)
         {
