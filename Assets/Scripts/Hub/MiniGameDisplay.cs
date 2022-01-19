@@ -38,7 +38,6 @@ namespace Hub
             }
             _changeTimer = 0;
             _changeTime *= 1.05f;
-            print(_changeTime);
             _text.text = miniGames[miniGameIndex].Name;
             miniGameIndex++;
             if (miniGameIndex >= miniGames.Count)
