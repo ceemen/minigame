@@ -37,5 +37,13 @@ namespace FloorDrop
                 }
             }
         }
+
+        public void GameOver()
+        {
+            foreach (var floorTile in _tiles)
+            {
+                floorTile.enabled = false;
+            }
+        }
     }
 }

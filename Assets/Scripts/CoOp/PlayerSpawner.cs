@@ -49,16 +49,20 @@ namespace CoOp
             if (playerInput == null)
                 return;
             // Add score to the player.
-            PlayerManager.AddWinner(playerInput.playerIndex);
-            _players.Remove(playerInput);
-            playerRemoved.Invoke(player);
+            RemovePlayerInput(playerInput);
             // Skip if at least 2 player still alive
             if (_players.Count > 1)
                 return;
             // Make the last player standing the winner
-            PlayerManager.AddWinner(_players[0].playerIndex);
-            playerRemoved.Invoke(_players[0].gameObject);
+            RemovePlayerInput(_players[0]);
             playersRemoved.Invoke();
+        }
+
+        private void RemovePlayerInput(PlayerInput player)
+        {
+            PlayerManager.AddWinner(player.playerIndex);
+            playerRemoved.Invoke(player.gameObject);
+            _players.Remove(player);
         }
 
         public List<GameObject> GetPlayers()
