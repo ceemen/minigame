@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 namespace CoOp
 {
@@ -14,8 +13,8 @@ namespace CoOp
             Color.blue,
             Color.yellow,
         };
-
         private readonly List<PlayerData> _players = new List<PlayerData>();
+        private readonly List<int> _winners = new List<int>();
 
         public static Color GetPlayerColour(int playerIndex)
         {
@@ -25,6 +24,11 @@ namespace CoOp
         public static List<PlayerData> GetPlayers()
         {
             return _instance._players;
+        }
+
+        public static List<int> GetWinners()
+        {
+            return _instance._winners;
         }
 
         private void Awake()
@@ -61,12 +65,17 @@ namespace CoOp
             return true;
         }
 
-        public static void UpdateScores(IEnumerable<int> players)
+        public static void AddWinner(int playerIndex)
         {
+            _instance._winners.Insert(0, playerIndex);
+            // skip if not all players are accounted for
+            if (_instance._winners.Count < _instance._players.Count)
+                return;
+            // update player scores
             var score = 1;
-            foreach (var player in players)
+            foreach (var winner in _instance._winners)
             {
-                _instance._players[player].AddScore(score);
+                _instance._players[winner].AddScore(score);
                 score++;
             }
         }

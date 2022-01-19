@@ -50,7 +50,7 @@ public class Destructor : MonoBehaviour
         Destroy(collision.gameObject);
         if (players.Count == 0)
         {
-            SceneTransition.LoadScene(0);
+            SceneTransition.LoadHub();
         }
     }
 }

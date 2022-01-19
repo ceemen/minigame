@@ -45,7 +45,7 @@ namespace SRunner
             {
                 gameEndTimeOut += Time.deltaTime;
                 if (gameEndTimeOut > 6)
-                    SceneTransition.LoadScene(6);
+                    SceneTransition.LoadHub();
                 return;
             }
             startSpeed += speedInc * Time.deltaTime;

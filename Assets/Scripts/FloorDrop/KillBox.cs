@@ -1,4 +1,3 @@
-using System;
 using CoOp;
 using UnityEngine;
 
@@ -10,10 +9,12 @@ namespace FloorDrop
 
         private void OnTriggerEnter(Collider other)
         {
-            // Only check for collisions with player
-            if (!other.CompareTag("Player"))
-                return;
-            spawner.RemovePlayer(other.gameObject);
+            // Remove player once they touch the lava
+            if (other.CompareTag("Player"))
+            {
+                spawner.RemovePlayer(other.gameObject);
+                other.GetComponent<CapsuleCollider>().isTrigger = true;
+            }
         }
     }
 }

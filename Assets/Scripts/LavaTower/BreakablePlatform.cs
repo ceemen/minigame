@@ -7,10 +7,11 @@ namespace LavaTower
     {
         private MeshRenderer _mr;
         private BoxCollider _bc;
+
         private void Awake()
         {
-            _mr = GetComponent<MeshRenderer>();
-            _bc = GetComponent<BoxCollider>();
+            _mr = GetComponentInChildren<MeshRenderer>();
+            _bc = GetComponentInChildren<BoxCollider>();
         }
 
         private void OnTriggerEnter(Collider other)
