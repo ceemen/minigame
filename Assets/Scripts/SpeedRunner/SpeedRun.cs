@@ -9,6 +9,9 @@ namespace SRunner
 {
     public class SpeedRun : MonoBehaviour
     {
+        [SerializeField] private List<AudioSource> noises;
+
+
         [SerializeField] private TextMeshProUGUI leaderBoardText;
 
         [SerializeField] private float startSpeed = 3.0f;
@@ -42,7 +45,7 @@ namespace SRunner
             {
                 gameEndTimeOut += Time.deltaTime;
                 if (gameEndTimeOut > 6)
-                    SceneTransition.LoadScene(0);
+                    SceneTransition.LoadHub();
                 return;
             }
             startSpeed += speedInc * Time.deltaTime;
@@ -79,6 +82,7 @@ namespace SRunner
                     return;
                 if(p==player)
                 {
+                    noises[Random.Range(0, noises.Count)].Play(0);
                     switch ((int)p.transform.position.z/3)
                     {
                         case 0:

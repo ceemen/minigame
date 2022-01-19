@@ -8,7 +8,6 @@ namespace UI
 {
     public class Lobby : Menu
     {
-        [SerializeField] private Animator transition; 
         [SerializeField] private Canvas mainMenu;
         [SerializeField] private Button startButton;
         [SerializeField] private RectTransform panel;
@@ -18,7 +17,7 @@ namespace UI
         public void StartGame()
         {
             inputManager.enabled = false;
-            SceneTransition.LoadScene(2);
+            SceneTransition.LoadHub();
         }
 
         public void Back()
