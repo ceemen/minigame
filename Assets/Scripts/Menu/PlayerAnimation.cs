@@ -1,18 +1,16 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Menu
 {
     public class PlayerAnimation : MonoBehaviour
     {
+        private const int DanceCount = 1;
         private static readonly int Idle = Animator.StringToHash("Idle");
         private static readonly int Run = Animator.StringToHash("Run");
         private static readonly int Jump = Animator.StringToHash("Jump");
         private static readonly int Punch = Animator.StringToHash("Punch");
-        private static readonly int Clap = Animator.StringToHash("Clap");
-        
+        private static readonly int WinPose = Animator.StringToHash("WinPose");
         private Animator _animator;
-        
         private Vector3 _targetForward;
         private int _animation = Idle;
 
@@ -46,7 +44,8 @@ namespace Menu
         public void SetWinner(bool winner)
         {
             // Do a random dance if winner
-            SetAnimation(winner ? Run : Clap);
+            var pose = winner ? Random.Range(1, DanceCount + 1) : 0;
+            _animator.SetInteger(WinPose, pose);
         }
 
         private void SetAnimation(int newAnimation)

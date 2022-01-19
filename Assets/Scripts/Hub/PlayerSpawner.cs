@@ -1,6 +1,7 @@
 using CoOp;
 using Menu;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 namespace Hub
 {
@@ -23,13 +24,20 @@ namespace Hub
             for (var p = 0; p < playerCount; p++)
             {
                 // spawn the pillar
-                var pillarOffset = PillarGap * (p - playerOffset) * Vector3.right;
+                var pillarOffset = new Vector3(
+                    PillarGap * (p - playerOffset),
+                    players[p].GetScore() * ScoreHeight,
+                    0);
                 var newPillar = Instantiate(pillar, _pillarPosition + pillarOffset, Quaternion.identity);
                 // spawn the player
                 var newPlayer = Instantiate(playerPrefab, newPillar.transform, false);
                 newPlayer.transform.localPosition = _playerPosition;
                 newPlayer.GetComponentInChildren<Renderer>().material.color = PlayerManager.GetPlayerColour(p);
-                var winner = winners.Count > 0 && winners[0] == p;
+                // set player animation
+                // skip if game just started
+                if (winners.Count == 0)
+                    continue;
+                var winner = winners[0] == p;
                 newPlayer.GetComponentInChildren<PlayerAnimation>().SetWinner(winner);
             }
         }
