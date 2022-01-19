@@ -53,12 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8500470753092830003, guid: 9fde818cdf32d7f4ca187dd8cf188d03, type: 3}
       propertyPath: m_Name
-      value: MenuPlayer
+      value: HubPlayer
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6554402270029235661, guid: 9fde818cdf32d7f4ca187dd8cf188d03, type: 3}
     - {fileID: 8500470753092830001, guid: 9fde818cdf32d7f4ca187dd8cf188d03, type: 3}
     - {fileID: 4631682356830676689, guid: 9fde818cdf32d7f4ca187dd8cf188d03, type: 3}
     - {fileID: 557448159, guid: 9fde818cdf32d7f4ca187dd8cf188d03, type: 3}
-    - {fileID: 3562624471550410357, guid: 9fde818cdf32d7f4ca187dd8cf188d03, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9fde818cdf32d7f4ca187dd8cf188d03, type: 3}

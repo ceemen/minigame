@@ -9,6 +9,7 @@ namespace Menu
         private static readonly int Run = Animator.StringToHash("Run");
         private static readonly int Jump = Animator.StringToHash("Jump");
         private static readonly int Punch = Animator.StringToHash("Punch");
+        private static readonly int Clap = Animator.StringToHash("Clap");
         
         private Animator _animator;
         
@@ -40,6 +41,12 @@ namespace Menu
                 SetAnimation(Run);
             else
                 SetAnimation(Idle);
+        }
+
+        public void SetWinner(bool winner)
+        {
+            // Do a random dance if winner
+            SetAnimation(winner ? Run : Clap);
         }
 
         private void SetAnimation(int newAnimation)
