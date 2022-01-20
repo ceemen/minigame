@@ -11,6 +11,7 @@ namespace SRunner
     {
         [SerializeField] private List<AudioSource> noises;
 
+        [SerializeField] private PlayerSpawner spawner;
 
         [SerializeField] private TextMeshProUGUI leaderBoardText;
 
@@ -34,7 +35,7 @@ namespace SRunner
         void Start()
         {
             players = new List<GameObject>();
-            players.AddRange(GameObject.FindGameObjectsWithTag("Player"));
+            players = spawner.GetPlayers(); //.AddRange(GameObject.FindGameObjectsWithTag("Player"));
             time = (SpeedRTimer)timer.GetComponent(typeof(SpeedRTimer));
         }
 
@@ -79,8 +80,8 @@ namespace SRunner
             foreach (GameObject p in players)
             {
                 if (p == null)
-                    return;
-                if(p==player)
+                    continue;
+                else if(p==player)
                 {
                     noises[Random.Range(0, noises.Count)].Play(0);
                     switch ((int)p.transform.position.z/3)
@@ -101,8 +102,9 @@ namespace SRunner
                             break;
                     }
                     players.Remove(p);
+                    spawner.RemovePlayer(p);
                     Destroy(p);
-                    Debug.Log(players.Count);
+                    Debug.Log(players.Count + "fuck");
                     if (players.Count == 0)
                         GameEnd();
                     return;
