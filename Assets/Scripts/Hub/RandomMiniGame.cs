@@ -20,9 +20,9 @@ namespace Hub
         {
             new MiniGame("Floor Drop", "Scenes/FloorDrop"),
             new MiniGame("Lava Tower", "Scenes/LavaTower"),
-            new MiniGame("Wallpush", "Scenes/Wallpush"),
-            new MiniGame("Speedrunner", "Scenes/Speedrunner"),
-            new MiniGame("Frogger", "Scenes/Frogger"),
+            //new MiniGame("Wallpush", "Scenes/Wallpush"),
+            new MiniGame("Lava Road", "Scenes/Frogger"),
+            new MiniGame("Lavarunner", "Scenes/Speedrunner"),
         };
 
         public List<MiniGame> GetMiniGames()

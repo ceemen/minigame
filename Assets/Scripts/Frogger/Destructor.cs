@@ -11,6 +11,7 @@ public class Destructor : MonoBehaviour
 
     private PlayerSpawner spawner;
     private List<GameObject> players;
+    private bool hasHubbed = false;
 
     private void Start()
     {
@@ -54,7 +55,9 @@ public class Destructor : MonoBehaviour
 
         if (players.Count <= 1)
         {
-            SceneTransition.LoadHub();
+            if(!hasHubbed)
+                SceneTransition.LoadHub();
+            hasHubbed = true;
         }
     }
 }

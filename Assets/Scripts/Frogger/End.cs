@@ -10,7 +10,8 @@ public class End : MonoBehaviour
     [SerializeField] private AudioSource music;
     [SerializeField] private AudioSource endFlair;
     [SerializeField] private GameObject winText;
-    
+    private bool hasHubbed = false;
+
     void OnCollisionEnter(Collision collision)
     {
         music.mute = true;
@@ -22,6 +23,8 @@ public class End : MonoBehaviour
     private IEnumerator WaitForMusic()
     {
         yield return new WaitForSeconds(4);
-        SceneTransition.LoadHub();
+        if (!hasHubbed)
+            SceneTransition.LoadHub();
+        hasHubbed = true;
     }
 }

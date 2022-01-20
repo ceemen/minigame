@@ -21,7 +21,7 @@ namespace SRunner
         [SerializeField] private GameObject mainCamera;
         [SerializeField] private GameObject timer;
 
-
+        private bool hasTransitioned = false;
         private List<GameObject> players;
 
         private bool isRunning = true;
@@ -46,7 +46,11 @@ namespace SRunner
             {
                 gameEndTimeOut += Time.deltaTime;
                 if (gameEndTimeOut > 6)
-                    SceneTransition.LoadHub();
+                {
+                    if(!hasTransitioned)
+                        SceneTransition.LoadHub();
+                    hasTransitioned = true;
+                }
                 return;
             }
             startSpeed += speedInc * Time.deltaTime;
