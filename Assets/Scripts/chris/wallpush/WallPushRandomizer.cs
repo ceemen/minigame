@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CoOp;
 
 public class WallPushRandomizer : MonoBehaviour
 {
@@ -103,6 +104,7 @@ public class WallPushRandomizer : MonoBehaviour
         }
         if (gamestate == GameState.gameFinished)
         {
+            SceneTransition.LoadHub();
             print("Game has Finished");
         }
 
