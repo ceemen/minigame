@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Frogger;
 using Menu;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CutsceneScript : MonoBehaviour
 {
@@ -11,19 +12,15 @@ public class CutsceneScript : MonoBehaviour
     [SerializeField] private GameObject camera3;
     [SerializeField] private GameObject camera4;
 
-	private PlayerControllerFrogger[] players;
-
     // Start is called before the first frame update
     void Start()
     {
-	    players = FindObjectsOfType<PlayerControllerFrogger>();
-	    foreach (var player in players)
-			player.enabled = false;
 		StartCoroutine(TheSequence());
     }
 
    IEnumerator TheSequence()
     {
+
         yield return new WaitForSeconds(0.7f);
 
         camera2.SetActive(true);
@@ -38,8 +35,11 @@ public class CutsceneScript : MonoBehaviour
 
         camera4.SetActive(true);
         camera3.SetActive(false);
-		
+
+        var players = FindObjectsOfType<PlayerInput>();
         foreach (var player in players)
-	        player.enabled = true;
+        {
+            player.enabled = true;
+        }
     }
 }
