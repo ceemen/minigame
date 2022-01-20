@@ -17,6 +17,8 @@ namespace SRunner
         private int platformHeight;
         private int prevFloat = 0;
         private int prevRaised;
+        private int prevHeight = 0;
+        private int prevPrevHeight = 0;
 
         void Start()
         {
@@ -33,7 +35,7 @@ namespace SRunner
                 if (floatIndex == prevFloat)
                     floatIndex = (++floatIndex) % floatPlatforms.Length;
                 raiseIndex = Random.Range(0, raisedPlatforms.Length);
-                if (raiseIndex == prevFloat)
+                if (raiseIndex == prevRaised)
                     raiseIndex = (++raiseIndex) % raisedPlatforms.Length;
 
                 for (int j = 0; j < numPlayers; j++)
@@ -54,7 +56,7 @@ namespace SRunner
                 }
 
                 platformHeight += Random.Range(-1, 2);
-                while (platformHeight > 2 || platformHeight < 0)
+                while (platformHeight > 2 || platformHeight < 0||(platformHeight==prevHeight&& platformHeight == prevPrevHeight))
                 {
                     platformHeight += Random.Range(-1, 2);
                 }
