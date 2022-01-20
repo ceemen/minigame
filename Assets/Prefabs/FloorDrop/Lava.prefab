@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2913367432902255216}
   - component: {fileID: 2913367432902255217}
   - component: {fileID: 2913367432902255230}
-  - component: {fileID: 2913367432902255231}
   m_Layer: 0
   m_Name: Lava
   m_TagString: Untagged
@@ -61,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d3622fea1a757cf4594980b4f7b064f9, type: 2}
+  - {fileID: 2100000, guid: b18cba1800c27824286445329ccac49e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,16 +82,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2913367432902255231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2913367432902255228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ceaebf68daf4df08b98fd89ff9ad76b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: {x: 0.02, y: 0}

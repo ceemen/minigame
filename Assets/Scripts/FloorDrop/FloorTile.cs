@@ -22,12 +22,10 @@ namespace FloorDrop
             _timeLeft = timer;
         }
 
-        private void OnCollisionEnter(Collision other)
+        public void StartBreaking()
         {
-            // Only collide with players, and when enabled..
-            if (!other.gameObject.CompareTag("Player") || !enabled)
-                return;
-            _collided = true;
+            if (enabled)
+                _collided = true;
         }
 
         private void Update()
