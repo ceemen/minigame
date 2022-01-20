@@ -18,6 +18,7 @@ namespace CoOp
                 playerSpawner.RemovePlayer(player.gameObject);
                 GameObject.Destroy(player.gameObject);
             }
+
         }
 
     }

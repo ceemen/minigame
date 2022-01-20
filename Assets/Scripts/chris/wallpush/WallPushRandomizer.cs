@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using CoOp;
 
 public class WallPushRandomizer : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class WallPushRandomizer : MonoBehaviour
 
 
     public GameObject[] wallRocks;
+    private GameObject currentMovingWall;
     private float delay = 2.0f;
     private int currentGameDifficulty = 0;
     private bool inWallSequence = false;
@@ -66,8 +68,10 @@ public class WallPushRandomizer : MonoBehaviour
 
                     SetDelay();
 
-                    SelectWallToPush(numToPush);
+                    SelectWallToPush(wallRocks[numToPush]);
+                    currentMovingWall = wallRocks[numToPush];
 
+                    //print($"wall being moving wall is {numToPush}");
                     //print(delay);
                 }
             }
@@ -78,11 +82,11 @@ public class WallPushRandomizer : MonoBehaviour
                 if (delay <= 0.0f)
                 {
 
-                    print(indexForSequence);
+                    //print(indexForSequence);
                     SetDelay();
                     if (indexForSequence < wallRocks.Length && indexForSequence != wallRocks.Length-1)
                     {
-                        SelectWallToPush(indexForSequence);
+                        SelectWallToPush(wallRocks[indexForSequence]);
                         indexForSequence+=2;
                     }
                     else if(indexForSequence == wallRocks.Length)
@@ -100,6 +104,7 @@ public class WallPushRandomizer : MonoBehaviour
         }
         if (gamestate == GameState.gameFinished)
         {
+            SceneTransition.LoadHub();
             print("Game has Finished");
         }
 
@@ -107,17 +112,17 @@ public class WallPushRandomizer : MonoBehaviour
 
     }
 
-    private void SelectWallToPush(int index)
+    public void SelectWallToPush(GameObject wallObj)
     {
 
-        if (wallRocks[index].GetComponent<RockWallObj>().GetOutBool())
+        if (wallObj.GetComponent<RockWallObj>().GetOutBool())
         {
-            PushIn(index);
+            PushIn(wallObj);
             //print("anim speed is: " + wallRocks[index].GetComponent<Animator>().speed);
         }
-        else if(!wallRocks[index].GetComponent<RockWallObj>().GetOutBool())
+        else if(!wallObj.GetComponent<RockWallObj>().GetOutBool())
         {
-            PushOut(index);
+            PushOut(wallObj);
             //print("anim speed is: " + wallRocks[index].GetComponent<Animator>().speed);
         }
                    
@@ -155,7 +160,7 @@ public class WallPushRandomizer : MonoBehaviour
             delay = 0.4f;
         } else if (currentGameDifficulty == 5)
         {
-            delay = 0.2f;
+            delay = 0.3f;
         }
 
     }
@@ -186,7 +191,7 @@ public class WallPushRandomizer : MonoBehaviour
     {
         if (!inWallSequence)
         {
-            print("enabled called");
+            print("enabled event");
             inWallSequence = true;
 
         }
@@ -198,18 +203,23 @@ public class WallPushRandomizer : MonoBehaviour
         
     }
 
-    private void PushOut(int index)
+    private void PushOut(GameObject wallObj)
     {
-        wallRocks[index].GetComponent<Animator>().speed = 1 / delay;
-        wallRocks[index].GetComponent<Animator>().SetTrigger("Push");
-        wallRocks[index].GetComponent<RockWallObj>().SetOutBool(true);
+        wallObj.GetComponent<Animator>().speed = 1 / delay;
+        wallObj.GetComponent<Animator>().SetTrigger("Push");
+        wallObj.GetComponent<RockWallObj>().SetOutBool(true);
     }
 
-    private void PushIn(int index)
+    private void PushIn(GameObject wallObj)
     {
-        wallRocks[index].GetComponent<Animator>().speed = 1 / delay;
-        wallRocks[index].GetComponent<Animator>().SetTrigger("Retract");
-        wallRocks[index].GetComponent<RockWallObj>().SetOutBool(false);
+        wallObj.GetComponent<Animator>().speed = 1 / delay;
+        wallObj.GetComponent<Animator>().SetTrigger("Retract");
+        wallObj.GetComponent<RockWallObj>().SetOutBool(false);
+    }
+
+    public GameObject GetCurrentMovingWall()
+    {
+        return currentMovingWall;
     }
 
 }
